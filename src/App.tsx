@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Mic, Square, Copy, Check, Trash2, Settings, Loader2, AlertCircle, Sparkles, Play, Pause, RotateCcw, Key, History, ChevronDown, ChevronUp, ChevronLeft, Calendar, Download, FileText, FileCode, Sun, Moon, Search, Volume2, Wind, Mic2, FileDown, ArrowUpRight, Clock, Bookmark, Activity, Maximize2, X, FileUp, Clipboard, HelpCircle, Monitor, Edit2, Lightbulb } from "lucide-react";
+import { Mic, Square, Copy, Check, Trash2, Settings, Loader2, AlertCircle, Sparkles, Play, Pause, RotateCcw, Key, History, ChevronDown, ChevronUp, ChevronLeft, Calendar, Download, FileText, FileCode, Sun, Moon, Search, Volume2, Wind, Mic2, FileDown, ArrowUpRight, Clock, Bookmark, Activity, Maximize2, X, FileUp, Clipboard, HelpCircle, Monitor, Edit2, Lightbulb, Cpu } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Toaster, toast } from "sonner";
 import { cn } from "./lib/utils";
@@ -47,6 +47,15 @@ const DEFAULT_GLOSSARY: GlossaryItem[] = [
   { id: '5', term: 'Vibe Coding', context: 'Metodología' },
 ];
 
+const AVAILABLE_LLM_MODELS = [
+  { id: 'llama-3.1-8b-instant', name: 'Llama 3.1 8B Instant (Recomendado)', desc: 'Ultra rápido, eficiente y activo en todas las cuentas de Groq' },
+  { id: 'llama-3.3-70b-versatile', name: 'Llama 3.3 70B Versatile', desc: 'Mayor capacidad de análisis (si está disponible en tu cuenta)' },
+  { id: 'llama3-70b-8192', name: 'Llama 3 70B (8k context)', desc: 'Modelo clásico de 70B de Meta en Groq' },
+  { id: 'llama3-8b-8192', name: 'Llama 3 8B (8k context)', desc: 'Modelo estándar ligero de Meta' },
+  { id: 'gemma2-9b-it', name: 'Gemma 2 9B IT', desc: 'Modelo de Google para instrucciones' },
+  { id: 'mixtral-8x7b-32768', name: 'Mixtral 8x7B', desc: 'Arquitectura MoE de Mistral AI' },
+] as const;
+
 const REFINEMENT_MODES = [
   { id: 'standard', label: 'Estándar', description: 'Limpieza profesional equilibrada', icon: <Sparkles className="w-4 h-4" /> },
   { id: 'literal', label: 'Literal', description: 'Transcripción palabra por palabra', icon: <FileText className="w-4 h-4" /> },
@@ -57,23 +66,11 @@ const REFINEMENT_MODES = [
   { id: 'ultra_clean', label: 'Ultra-Limpio (IA)', description: 'Eliminación agresiva de ruido y muletillas', icon: <Wind className="w-4 h-4" /> },
 ] as const;
 
-const SUPPORTED_LANGUAGES = [
-  { code: 'es', label: 'Español', flag: '🇪🇸' },
-  { code: 'en', label: 'Inglés', flag: '🇺🇸' },
-  { code: 'fr', label: 'Francés', flag: '🇫🇷' },
-  { code: 'pt', label: 'Portugués', flag: '🇵🇹' },
-  { code: 'he', label: 'Hebreo', flag: '🇮🇱' },
-  { code: 'zh', label: 'Chino Mandarín', flag: '🇨🇳' },
-  { code: 'de', label: 'Alemán', flag: '🇩🇪' },
-  { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-  { code: 'ja', label: 'Japonés', flag: '🇯🇵' },
-] as const;
-
 const USAGE_TIPS = [
   { title: "Limpieza de Silencios", text: "Si tienes silencios largos al principio o al final, selecciona la parte con voz y usa 'Mantener selección'." },
-  { title: "Corrección de Errores", text: "Si te equivocas al hablar, selecciona el fragmento del error y usa 'Eliminar selección'." },
-  { title: "Límite de Tiempo", text: "La transcripción y traducción están optimizadas para audios de hasta 15 minutos." },
-  { title: "Idiomas", text: "Soportamos Inglés, Francés, Hebreo, Portugués y Chino Mandarín. La IA traducirá automáticamente al español." },
+  { title: "Corrección de Errores", text: "Si te equivocas al hablar, selecciona el fragmento del error y usa 'Eliminar selección' o edita las palabras dudosas resaltadas en amarillo." },
+  { title: "Límite de Tiempo", text: "La transcripción en español está optimizada para audios de alta fidelidad de hasta 15 minutos." },
+  { title: "Edición de Palabras", text: "Las palabras ambiguas o dudosas se resaltan en amarillo para que puedas corregirlas antes de descargar el archivo TXT." },
 ];
 
 type RefinementMode = typeof REFINEMENT_MODES[number]['id'];
@@ -216,6 +213,7 @@ export default function App() {
   const [isPresentationMode, setIsPresentationMode] = useState(false);
   const [readingTheme, setReadingTheme] = useState<'light' | 'dark' | 'sepia'>('light');
   const [userApiKey, setUserApiKey] = useState(() => localStorage.getItem("groq_api_key") || "");
+  const [selectedLlmModel, setSelectedLlmModel] = useState<string>(() => localStorage.getItem("groq_selected_model") || "llama-3.1-8b-instant");
   const [showApiKey, setShowApiKey] = useState(false);
   const [showTutorial, setShowTutorial] = useState(() => !localStorage.getItem("tutorial_seen"));
   const [tutorialStep, setTutorialStep] = useState(0);
@@ -274,9 +272,33 @@ export default function App() {
   });
   const [doubtfulWords, setDoubtfulWords] = useState<DoubtfulWord[]>([]);
   const [selectedDoubtfulWord, setSelectedDoubtfulWord] = useState<DoubtfulWord | null>(null);
+  const [editingWordValue, setEditingWordValue] = useState<string>("");
   const [showGlossaryModal, setShowGlossaryModal] = useState(false);
   const [newGlossaryTerm, setNewGlossaryTerm] = useState("");
   const [newGlossaryContext, setNewGlossaryContext] = useState("General");
+
+  const handleReplaceDoubtfulWord = (customNewWord?: string) => {
+    if (!selectedDoubtfulWord) return;
+    const oldWord = selectedDoubtfulWord.word;
+    const newWord = (customNewWord !== undefined ? customNewWord : editingWordValue).trim();
+    if (!newWord) return;
+
+    // Replace in clean transcription (case insensitive, full word when possible)
+    const escapedOld = oldWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${escapedOld}\\b`, 'gi');
+    const updatedClean = cleanTranscription.replace(regex, newWord);
+    setCleanTranscription(updatedClean);
+    setIsCleanEdited(true);
+
+    // Remove from doubtful words list
+    setDoubtfulWords(prev => prev.filter(dw => dw.word.toLowerCase() !== oldWord.toLowerCase()));
+    setSelectedDoubtfulWord(null);
+    setEditingWordValue("");
+    playFeedbackSound('click');
+    toast.success(`Palabra corregida`, {
+      description: `"${oldWord}" reemplazada por "${newWord}" en el texto.`
+    });
+  };
 
   const getGlossaryPrompt = () => {
     let terms = glossary;
@@ -441,41 +463,6 @@ export default function App() {
     }
   }, [soundEnabled]);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isPresentationMode) {
-        setIsPresentationMode(false);
-      }
-      
-      if (isPresentationMode && presentationRef.current) {
-        const scrollAmount = 300;
-        if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
-          e.preventDefault();
-          presentationRef.current.scrollBy({ top: scrollAmount, behavior: 'smooth' });
-        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-          e.preventDefault();
-          presentationRef.current.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
-        }
-        return;
-      }
-
-      // Quick Record Shortcut: Space or 'g' when not inside an input/textarea
-      const target = e.target as HTMLElement;
-      const isInput = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable;
-      if (!isInput && (e.key === 'g' || e.key === 'G') && !e.ctrlKey && !e.metaKey && !e.altKey) {
-        e.preventDefault();
-        if (isRecording) {
-          stopRecording();
-        } else if (audioUrl && !isTranscribing && !isCleaning) {
-          startTranscription();
-        } else if (!isRecording && !audioUrl) {
-          startRecording();
-        }
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isPresentationMode, isRecording, audioUrl, isTranscribing, isCleaning, stopRecording, startTranscription, startRecording]);
 
   useEffect(() => {
     if (isPresentationMode) {
@@ -1094,6 +1081,10 @@ export default function App() {
   }, [userApiKey]);
 
   useEffect(() => {
+    localStorage.setItem("groq_selected_model", selectedLlmModel);
+  }, [selectedLlmModel]);
+
+  useEffect(() => {
     checkConfig();
   }, []);
 
@@ -1388,6 +1379,40 @@ export default function App() {
           </button>
         );
       }
+
+      if (doubtfulWords.length > 0) {
+        const words = part.split(/(\s+|[.,;:!?¡¿()\[\]"]+)/);
+        return (
+          <React.Fragment key={i}>
+            {words.map((chunk, j) => {
+              const cleanedChunk = chunk.trim().replace(/^[.,;:!?¡¿()\[\]"]+|[.,;:!?¡¿()\[\]"]+$/g, "").toLowerCase();
+              const matchedDoubt = doubtfulWords.find(dw => dw.word.toLowerCase() === cleanedChunk);
+              
+              if (matchedDoubt && cleanedChunk.length > 0) {
+                const isSelected = selectedDoubtfulWord?.word.toLowerCase() === matchedDoubt.word.toLowerCase();
+                return (
+                  <span
+                    key={`${i}-${j}`}
+                    onClick={() => {
+                      setSelectedDoubtfulWord(matchedDoubt);
+                      setEditingWordValue(matchedDoubt.word);
+                    }}
+                    className={cn(
+                      "bg-yellow-300 dark:bg-yellow-400/30 text-yellow-950 dark:text-yellow-200 px-1 py-0.5 mx-0.5 rounded font-semibold cursor-pointer border-b-2 border-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400/50 transition-all inline-block shadow-sm ring-1 ring-yellow-400/50",
+                      isSelected && "ring-2 ring-amber-500 bg-yellow-400 dark:bg-yellow-400/60 scale-105"
+                    )}
+                    title={`Palabra dudosa: "${matchedDoubt.word}". Haz clic para corregir.`}
+                  >
+                    {chunk}
+                  </span>
+                );
+              }
+              return chunk;
+            })}
+          </React.Fragment>
+        );
+      }
+
       return part;
     });
   };
@@ -1450,6 +1475,42 @@ export default function App() {
       setIsCleanEdited(false);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isPresentationMode) {
+        setIsPresentationMode(false);
+      }
+      
+      if (isPresentationMode && presentationRef.current) {
+        const scrollAmount = 300;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+          e.preventDefault();
+          presentationRef.current.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          presentationRef.current.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+        }
+        return;
+      }
+
+      // Quick Record Shortcut: Space or 'g' when not inside an input/textarea
+      const target = e.target as HTMLElement;
+      const isInput = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable;
+      if (!isInput && (e.key === 'g' || e.key === 'G') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+        if (isRecording) {
+          stopRecording();
+        } else if (audioUrl && !isTranscribing && !isCleaning) {
+          startTranscription();
+        } else if (!isRecording && !audioUrl) {
+          startRecording();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isPresentationMode, isRecording, audioUrl, isTranscribing, isCleaning, stopRecording, startTranscription, startRecording]);
 
   const discardRecording = () => {
     playFeedbackSound('delete');
@@ -1878,6 +1939,92 @@ export default function App() {
     return result.trim();
   };
 
+  const callGroqCleanWithFallback = async (payload: {
+    messages: any[];
+    temperature?: number;
+    response_format?: any;
+  }) => {
+    const candidates = [
+      selectedLlmModel,
+      "llama-3.1-8b-instant",
+      "llama-3.3-70b-versatile",
+      "llama3-70b-8192",
+      "llama3-8b-8192",
+      "gemma2-9b-it",
+      "mixtral-8x7b-32768",
+    ];
+    const uniqueModels = Array.from(new Set(candidates.filter(Boolean)));
+
+    let lastError: any = null;
+
+    for (const modelToTry of uniqueModels) {
+      try {
+        const response = await fetchWithRetry("/api/clean", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            ...(userApiKey && { "x-groq-api-key": userApiKey }),
+          },
+          body: JSON.stringify({
+            ...payload,
+            model: modelToTry,
+          }),
+        });
+
+        if (response.ok) {
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.includes("application/json")) {
+            const data = await response.json();
+            if (modelToTry !== selectedLlmModel) {
+              console.log(`Auto-switched model to ${modelToTry}`);
+              setSelectedLlmModel(modelToTry);
+            }
+            return data;
+          }
+          const textResp = await response.text();
+          if (textResp.includes("<title>Cookie check</title>") || textResp.includes("Action required to load your app")) {
+            throw new Error("Cookie check");
+          }
+          throw new Error(`Respuesta no válida del servidor (${response.status})`);
+        }
+
+        let errorMessage = `Error ${response.status}: ${response.statusText}`;
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.includes("application/json")) {
+          try {
+            const errorData = await response.json();
+            if (errorData.error) {
+              errorMessage = typeof errorData.error === 'string' ? errorData.error : (errorData.error.message || errorMessage);
+            } else if (errorData.message) {
+              errorMessage = errorData.message;
+            }
+          } catch (_) {}
+        }
+
+        lastError = new Error(errorMessage);
+
+        const isModelError = response.status === 404 || 
+          errorMessage.toLowerCase().includes("model") || 
+          errorMessage.toLowerCase().includes("does not exist") || 
+          errorMessage.toLowerCase().includes("access");
+
+        if (isModelError) {
+          console.warn(`Model ${modelToTry} unavailable (${errorMessage}). Retrying with next candidate...`);
+          continue;
+        }
+
+        throw lastError;
+      } catch (err: any) {
+        if (err.message && (err.message.includes("autenticación") || err.message.includes("401"))) {
+          throw err;
+        }
+        lastError = err;
+      }
+    }
+
+    throw lastError || new Error("No se pudo procesar la solicitud con ningún modelo disponible de Groq.");
+  };
+
   const cleanText = async (text: string, words?: Word[]) => {
     if (!text || typeof text !== 'string' || !text.trim()) return;
 
@@ -1898,10 +2045,6 @@ export default function App() {
     };
 
     let systemPrompt = modePrompts[refinementMode];
-    if (sourceLanguage !== 'es') {
-      const langName = SUPPORTED_LANGUAGES.find(l => l.code === sourceLanguage)?.label || sourceLanguage;
-      systemPrompt += `\n\nIMPORTANTE: El texto original está en ${langName}. Debes TRADUCIRLO AL ESPAÑOL mientras aplicas la limpieza y el formato solicitado.`;
-    }
 
     systemPrompt += `\n\nDebes devolver la respuesta en formato JSON con la siguiente estructura:
 {
@@ -1918,59 +2061,20 @@ Para 'syncedWords', utiliza las marcas de tiempo originales de las palabras prop
 Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio que sean nombres propios ambiguos, palabras técnicas poco comunes o vacilaciones que pudieran requerir revisión humana.`;
 
     try {
-      const response = await fetchWithRetry("/api/clean", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(userApiKey && { "x-groq-api-key": userApiKey })
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [
-            {
-              role: "system",
-              content: systemPrompt,
-            },
-            {
-              role: "user",
-              content: `Procesa este texto y sus marcas de tiempo:\n\nTexto: ${text}\n\nPalabras con marcas de tiempo: ${JSON.stringify(words || [])}`,
-            },
-          ],
-          temperature: 0.1,
-          response_format: { type: "json_object" }
-        }),
+      const data = await callGroqCleanWithFallback({
+        messages: [
+          {
+            role: "system",
+            content: systemPrompt,
+          },
+          {
+            role: "user",
+            content: `Procesa este texto y sus marcas de tiempo:\n\nTexto: ${text}\n\nPalabras con marcas de tiempo: ${JSON.stringify(words || [])}`,
+          },
+        ],
+        temperature: 0.1,
+        response_format: { type: "json_object" }
       });
-
-      if (!response.ok) {
-        let errorMessage = `Error ${response.status}: ${response.statusText}`;
-        const contentType = response.headers.get("content-type");
-        
-        if (contentType && contentType.includes("application/json")) {
-          try {
-            const errorData = await response.json();
-            if (errorData.error) {
-              errorMessage = typeof errorData.error === 'string' ? errorData.error : (errorData.error.message || errorMessage);
-            } else if (errorData.message) {
-              errorMessage = errorData.message;
-            }
-          } catch (e) {
-            // Fallback
-          }
-        }
-        
-        throw new Error(errorMessage);
-      }
-
-      const contentType = response.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        const textResponse = await response.text();
-        if (textResponse.includes("<title>Cookie check</title>") || textResponse.includes("Action required to load your app")) {
-          throw new Error("Cookie check");
-        }
-        throw new Error(`Respuesta no válida del servidor (${response.status})`);
-      }
-
-      const data = await response.json();
       
       if (!data.choices || !data.choices[0] || !data.choices[0].message || typeof data.choices[0].message.content !== 'string') {
         setCleanTranscription(text); // Fallback
@@ -2045,30 +2149,21 @@ Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio q
     
     setIsGeneratingSummary(true);
     try {
-      const response = await fetchWithRetry("/api/clean", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(userApiKey && { "x-groq-api-key": userApiKey })
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [
-            {
-              role: "system",
-              content: "Eres un experto en síntesis de información. Tu tarea es generar un resumen ejecutivo conciso y una lista de puntos clave a partir del texto proporcionado. Devuelve la respuesta en formato JSON con las llaves 'summary' (string) y 'keyPoints' (array de strings).",
-            },
-            {
-              role: "user",
-              content: `Genera un resumen y puntos clave para este texto:\n\n${text}`,
-            },
-          ],
-          temperature: 0.3,
-          response_format: { type: "json_object" }
-        }),
+      const data = await callGroqCleanWithFallback({
+        messages: [
+          {
+            role: "system",
+            content: "Eres un experto en síntesis de información. Tu tarea es generar un resumen ejecutivo conciso y una lista de puntos clave a partir del texto proporcionado. Devuelve la respuesta en formato JSON con las llaves 'summary' (string) y 'keyPoints' (array de strings).",
+          },
+          {
+            role: "user",
+            content: `Genera un resumen y puntos clave para este texto:\n\n${text}`,
+          },
+        ],
+        temperature: 0.3,
+        response_format: { type: "json_object" }
       });
 
-      const data = await response.json();
       const content = JSON.parse(data.choices[0].message.content);
       
       if (historyId) {
@@ -2100,30 +2195,21 @@ Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio q
 
     setIsSuggestingImprovements(true);
     try {
-      const response = await fetchWithRetry("/api/clean", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(userApiKey && { "x-groq-api-key": userApiKey })
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [
-            {
-              role: "system",
-              content: "Eres un analista crítico. Tu tarea es revisar un resumen y puntos clave existentes comparándolos con el texto original para sugerir mejoras o puntos adicionales omitidos. Devuelve la respuesta en formato JSON con las llaves 'suggestedSummary' (string con el resumen mejorado) y 'additionalPoints' (array de strings con puntos nuevos o mejorados).",
-            },
-            {
-              role: "user",
-              content: `Texto Original:\n${item.clean}\n\nResumen Actual:\n${item.summary}\n\nPuntos Clave Actuales:\n${(item.keyPoints || []).join("\n")}\n\nPor favor, sugiere una versión mejorada del resumen y puntos adicionales que falten.`,
-            },
-          ],
-          temperature: 0.5,
-          response_format: { type: "json_object" }
-        }),
+      const data = await callGroqCleanWithFallback({
+        messages: [
+          {
+            role: "system",
+            content: "Eres un analista crítico. Tu tarea es revisar un resumen y puntos clave existentes comparándolos con el texto original para sugerir mejoras o puntos adicionales omitidos. Devuelve la respuesta en formato JSON con las llaves 'suggestedSummary' (string con el resumen mejorado) y 'additionalPoints' (array de strings con puntos nuevos o mejorados).",
+          },
+          {
+            role: "user",
+            content: `Texto Original:\n${item.clean}\n\nResumen Actual:\n${item.summary}\n\nPuntos Clave Actuales:\n${(item.keyPoints || []).join("\n")}\n\nPor favor, sugiere una versión mejorada del resumen y puntos adicionales que falten.`,
+          },
+        ],
+        temperature: 0.5,
+        response_format: { type: "json_object" }
       });
 
-      const data = await response.json();
       const content = JSON.parse(data.choices[0].message.content);
       
       // We enter edit mode with the suggested content
@@ -3716,6 +3802,26 @@ Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio q
                       </p>
                     </div>
 
+                    <div className="space-y-2 p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-2xl border border-neutral-100 dark:border-neutral-800/50">
+                      <label className="text-xs font-bold uppercase tracking-widest text-neutral-500 flex items-center gap-2">
+                        <Cpu className="w-3.5 h-3.5" /> Modelo LLM (Limpieza y Resumen)
+                      </label>
+                      <select
+                        value={selectedLlmModel}
+                        onChange={(e) => setSelectedLlmModel(e.target.value)}
+                        className="w-full px-4 py-2.5 text-xs bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-medium text-neutral-700 dark:text-neutral-300 cursor-pointer"
+                      >
+                        {AVAILABLE_LLM_MODELS.map((m) => (
+                          <option key={m.id} value={m.id}>
+                            {m.name}
+                          </option>
+                        ))}
+                      </select>
+                      <p className="text-[10px] text-neutral-400">
+                        {AVAILABLE_LLM_MODELS.find(m => m.id === selectedLlmModel)?.desc || "Modelo para procesar y estructurar el texto."}
+                      </p>
+                    </div>
+
                     {hasGoogleConfig && (
                       <div className="space-y-3 p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-2xl border border-neutral-100 dark:border-neutral-800/50">
                         <label className="text-xs font-bold uppercase tracking-widest text-neutral-500 flex items-center gap-2">
@@ -3807,43 +3913,6 @@ Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio q
         </div>
 
         <div className="flex flex-col items-center justify-center py-16 space-y-10">
-          {/* Language Selector */}
-          {!isRecording && !isTranscribing && !isCleaning && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex flex-col items-center gap-3"
-            >
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Idioma de entrada</p>
-              <div className="flex flex-wrap justify-center gap-2 max-w-2xl px-4">
-                {SUPPORTED_LANGUAGES.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      setSourceLanguage(lang.code);
-                      localStorage.setItem("source_language", lang.code);
-                      playFeedbackSound('click');
-                    }}
-                    className={cn(
-                      "flex items-center gap-2 px-3 py-1.5 rounded-xl text-[10px] font-bold transition-all border",
-                      sourceLanguage === lang.code
-                        ? "bg-blue-500 border-blue-500 text-white shadow-md shadow-blue-500/20 scale-105"
-                        : "bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 text-neutral-500 hover:border-blue-200"
-                    )}
-                  >
-                    <span>{lang.flag}</span>
-                    <span>{lang.label}</span>
-                  </button>
-                ))}
-              </div>
-              {sourceLanguage !== 'es' && (
-                <p className="text-[9px] text-blue-500 font-bold uppercase tracking-widest animate-pulse">
-                  Se traducirá automáticamente al español
-                </p>
-              )}
-            </motion.div>
-          )}
-
           {/* Refinement Mode Selector */}
           {!isRecording && !isTranscribing && !isCleaning && (
             <motion.div 
@@ -4177,6 +4246,32 @@ Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio q
                 <div className="mt-2 p-2 bg-red-100/50 dark:bg-red-900/40 rounded-lg border border-red-200/50 dark:border-red-800/50">
                   <p className="text-[10px] font-bold uppercase tracking-wider opacity-70 mb-1">Sugerencia:</p>
                   <p className="text-xs italic leading-relaxed">{errorSuggestion}</p>
+                </div>
+              )}
+              {error.toLowerCase().includes("groq") && (
+                <div className="mt-3 pt-3 border-t border-red-200/40 dark:border-red-950/40 space-y-2 text-xs">
+                  <p className="font-semibold text-neutral-800 dark:text-neutral-200">¿Cómo obtener y aplicar tu API Key de Groq gratuita?</p>
+                  <ol className="list-decimal list-inside space-y-1.5 pl-1 text-neutral-600 dark:text-neutral-300">
+                    <li>
+                      Ve a la consola oficial de Groq:{" "}
+                      <a 
+                        href="https://console.groq.com/keys" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="underline hover:text-blue-500 font-semibold text-blue-600 dark:text-blue-400"
+                      >
+                        console.groq.com/keys
+                      </a>.
+                    </li>
+                    <li>Crea una cuenta gratuita o inicia sesión, y haz clic en <strong>"Create API Key"</strong>.</li>
+                    <li>Asigna un nombre a tu clave (ej. "Dictáfono") y cópiala (debe comenzar con <code>gsk_</code>).</li>
+                    <li>
+                      Abre el panel de <strong>Ajustes</strong> (haciendo clic en el icono de engranaje <Settings className="w-3.5 h-3.5 inline-block -mt-0.5 mx-0.5" /> arriba a la derecha).
+                    </li>
+                    <li>
+                      Pega tu clave en la sección <strong>"Groq API Key"</strong> y cierra el panel para guardar los cambios.
+                    </li>
+                  </ol>
                 </div>
               )}
             </div>
@@ -4609,43 +4704,74 @@ Para 'doubtfulWords', identifica hasta 5 términos del texto original o limpio q
 
               {/* Selected Doubtful Word Inspector */}
               {selectedDoubtfulWord && (
-                <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-2xl space-y-3">
+                <div className="mb-6 p-5 bg-amber-50/90 dark:bg-amber-950/40 border-2 border-amber-300 dark:border-amber-700/60 rounded-3xl space-y-4 shadow-lg shadow-amber-500/5 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="flex justify-between items-center">
-                    <span className="text-xs font-bold text-blue-700 dark:text-blue-300 uppercase tracking-wider flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5" /> Término Seleccionado: <span className="underline decoration-amber-500 text-neutral-900 dark:text-white font-extrabold">{selectedDoubtfulWord.word}</span>
+                    <span className="text-xs font-bold text-amber-900 dark:text-amber-300 uppercase tracking-wider flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-amber-500" /> Corregir Término Dudoso: 
+                      <span className="bg-yellow-300 text-neutral-900 px-2 py-0.5 rounded-lg font-black text-sm">
+                        {selectedDoubtfulWord.word}
+                      </span>
                     </span>
                     <button
                       onClick={() => setSelectedDoubtfulWord(null)}
-                      className="text-neutral-400 hover:text-neutral-600"
+                      className="p-1 text-neutral-400 hover:text-neutral-600 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
                     >
                       <X className="w-4 h-4" />
                     </button>
                   </div>
+
                   {selectedDoubtfulWord.reason && (
-                    <p className="text-[11px] text-neutral-600 dark:text-neutral-300 italic">
-                      Motivo: {selectedDoubtfulWord.reason}
+                    <p className="text-xs text-neutral-600 dark:text-neutral-300 italic">
+                      💡 Posible ambigüedad: {selectedDoubtfulWord.reason}
                     </p>
                   )}
-                  <div className="flex flex-wrap items-center gap-3 pt-1">
+
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+                    <div className="flex-1 relative">
+                      <input
+                        type="text"
+                        value={editingWordValue}
+                        onChange={(e) => setEditingWordValue(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            handleReplaceDoubtfulWord();
+                          }
+                        }}
+                        placeholder="Escribe la palabra correcta..."
+                        className="w-full px-4 py-2 text-sm bg-white dark:bg-neutral-900 border border-amber-300 dark:border-amber-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/30 text-neutral-900 dark:text-neutral-100 font-medium"
+                      />
+                    </div>
+
                     <button
-                      onClick={() => {
-                        if (wavesurferRef.current) {
-                          wavesurferRef.current.setTime(selectedDoubtfulWord.start);
-                          wavesurferRef.current.play();
-                        }
-                      }}
-                      className="px-3 py-1.5 bg-blue-500 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md shadow-blue-500/20"
+                      onClick={() => handleReplaceDoubtfulWord()}
+                      className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-green-600/20 transition-all cursor-pointer shrink-0"
                     >
-                      <Play className="w-3.5 h-3.5" /> Escuchar Audio ({selectedDoubtfulWord.start.toFixed(1)}s - {selectedDoubtfulWord.end.toFixed(1)}s)
+                      <Check className="w-4 h-4" /> Aplicar Corrección
                     </button>
+
+                    {audioUrl && (
+                      <button
+                        onClick={() => {
+                          if (wavesurferRef.current) {
+                            wavesurferRef.current.setTime(selectedDoubtfulWord.start);
+                            wavesurferRef.current.play();
+                          }
+                        }}
+                        className="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-md shadow-blue-500/20 transition-all shrink-0"
+                      >
+                        <Play className="w-3.5 h-3.5" /> Escuchar ({selectedDoubtfulWord.start.toFixed(1)}s)
+                      </button>
+                    )}
+
                     <button
                       onClick={() => {
-                        addToGlossary(selectedDoubtfulWord.word);
-                        setSelectedDoubtfulWord(null);
+                        addToGlossary(editingWordValue || selectedDoubtfulWord.word);
+                        handleReplaceDoubtfulWord();
                       }}
-                      className="px-3 py-1.5 bg-amber-500 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md shadow-amber-500/20"
+                      className="px-3 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20 transition-all shrink-0"
+                      title="Guardar en glosario para futuras transcripciones"
                     >
-                      <Bookmark className="w-3.5 h-3.5" /> + Añadir al Glosario
+                      <Bookmark className="w-3.5 h-3.5" /> + Al Glosario
                     </button>
                   </div>
                 </div>

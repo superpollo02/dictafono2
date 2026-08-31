@@ -15,7 +15,7 @@
   },
   "build": {
     "appId": "com.educai.dictafono",
-    "productName": "Dictafono AI",
+    "productName": "Dictafono AI App",
     "directories": {
       "output": "dist_electron"
     },
