@@ -1,0 +1,164 @@
+--- PAGE 1 ---
+¿Cómo es el flujo para
+desgrabar un audio?
+Era así: grabás un audio en el teléfono, después tenés que subirlo a
+Google Drive, abrirlo con chatgpt, o Gemini para que lo transcriba,
+copiarlo, pegarlo en otro lado. Varios pasos, varios minutos, varias
+chances de que el flujo se corte.
+Dictáfono lo hace todo junto: grabás, apretás el botón, y obtenés el
+texto. Hasta 15 minutos de grabación. Dos opciones de salida: la
+transcripción exacta o una versión procesada por IA.
+Para quienes piensan mejor hablando que escribiendo.
+https://dictafonov4.vercel.app/
+🎙 Dictáfono con IA
+Grabás, apretás el botón, y obtenés el texto. Para quienes piensan mejor
+hablando que escribiendo.
+Ir a la app Cómo conseguir API key de Groq
+Made with
+14/8/26, 11:33 🎙  Dictáfono con IA
+https://dictafono-ai-qxsnswy.gamma.site 1/5
+--- PAGE 2 ---
+A continuación el instructivo de uso de DIctáfono
+GUÍA DE USUARIO
+1. ¿Qué es Dictáfono AI?
+Dictáfono es una herramienta avanzada de productividad diseñada para
+transformar tus pensamientos hablados en documentos profesionales
+listos para compartir. Utiliza inteligencia artificial de vanguardia para
+transcribir, limpiar y estructurar tus audios de manera automática.
+Utilidad
+Ideal para profesionales,
+estudiantes y creadores que
+necesitan capturar ideas,
+reuniones, entrevistas o clases
+sin perder tiempo en
+transcripciones manuales.
+Porque...
+Elimin
+a
+muleti
+llas
+Borra
+automát
+icament
+e los
+"eh...",
+"este...",
+repetici
+ones y
+errores
+gramati
+cales.
+Ahorr
+a
+tiemp
+o
+Evita
+horas
+de
+escritur
+a
+manual
+transcri
+biendo
+audios
+en
+segund
+os.
+Made with
+14/8/26, 11:33 🎙  Dictáfono con IA
+https://dictafono-ai-qxsnswy.gamma.site 2/5
+--- PAGE 3 ---
+Organización
+Transforma notas de voz
+desordenadas en textos
+estructurados (emails,
+listas, actas).
+GUÍA DE USUARIO
+2. Configuración Inicial
+Dado que se trata de proyecto de aprendizaje y no comercial,
+cada usuario gestiona su propia API key. Las de Groq son
+gratuitas y para el volumen de uso habitual, sobran.
+Ir a "Ajustes"
+Accedé al icono de
+engranaje en la
+aplicación.
+Verificar
+conexión
+Asegúrate de que el
+sistema esté
+conectado.
+Pegar tu API
+key de Groq
+Si usas tu propia
+llave de Groq,
+pégala en el campo
+correspondiente.
+Esto es lo que
+permite que la IA
+procese el texto.
+Made with
+14/8/26, 11:33 🎙  Dictáfono con IA
+https://dictafono-ai-qxsnswy.gamma.site 3/5
+--- PAGE 4 ---
+👉 Cómo obtener una API key de Groq: 
+https://www.geeksforgeeks.org/artificial-
+intelligence/how-to-get-a-groq-api-key/
+GUÍA DE USUARIO
+3. Procedimiento de Uso
+Paso A: Grabar
+o Subir
+Pulsar el botón del
+micrófono para
+empezar a hablar.
+Se puede pausar y
+reanudar. También
+podés arrastrar a la
+ventana o usar el
+botón de "Subir
+archivo".
+Paso B: Elegir
+Modo de
+Refinamiento
+Seleccioná entre
+Estándar, Formal,
+Email, Lista,
+Creativo o Literal, y
+procesá el audio.
+Paso C:
+Exportar
+Usá el botón de
+exportar para
+guardar la versión
+original o refinada
+en formato TXT,
+Markdown.
+Una
+herramienta
+Made with
+14/8/26, 11:33 🎙  Dictáfono con IA
+https://dictafono-ai-qxsnswy.gamma.site 4/5
+--- PAGE 5 ---
+libre, hecha
+para aprender
+Esta aplicación es de uso gratuito y es
+parte de un proceso de aprendizaje.
+No tiene como propósito competir con
+aplicaciones comerciales ni
+presentarse como una alternativa de
+emprendimiento. Se inscribe, más bien,
+en la cultura del "hágalo usted
+mismo".
+La pongo a disposición de quien la
+quiera usar. Sin costo, sin registro, sin
+condiciones.
+Lo que pido a cambio
+Nada económico. Lo que necesito
+es feedback real: qué funciona, qué
+no, qué le falta, qué sobra. Cada
+comentario es insumo para
+mejorarlas.
+feedback a
+@educaailatam@gmail.com
+Made with
+14/8/26, 11:33 🎙  Dictáfono con IA
+https://dictafono-ai-qxsnswy.gamma.site 5/5

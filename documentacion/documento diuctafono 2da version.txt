@@ -1,0 +1,100 @@
+
+guia usuario
+GUÍA DE USUARIO - DICTAFONO AI
+1. ¿QUÉ ES DICTAFONO AI?
+Dictafono AI es una herramienta avanzada de productividad diseñada para transformar tus pensamientos hablados en documentos profesionales listos para compartir. Utiliza inteligencia artificial de vanguardia para transcribir, limpiar y estructurar tus audios de manera automática.
+Utilidad
+Ideal para profesionales, estudiantes y creadores que necesitan capturar ideas, reuniones, entrevistas o clases sin perder tiempo en transcripciones manuales.
+Puntos de Dolor Solucionados
+Elimina muletillas: Borra automáticamente los "eh...", "este...", repeticiones y errores gramaticales.
+Ahorro de tiempo: Evita horas de escritura manual transcribiendo audios en segundos.
+Organización: Transforma notas de voz desordenadas en textos estructurados (emails, listas, actas).
+Traducción: Rompe barreras lingüísticas permitiendo transcribir y traducir audios en múltiples idiomas.
+
+2. CONFIGURACIÓN INICIAL
+Antes de empezar, asegúrate de realizar estos pasos:
+API Key: Ve a la sección de "Ajustes" (icono de engranaje). Asegúrate de que el sistema esté conectado. Si usas tu propia llave de Groq, pégala en el campo correspondiente. Esto es lo que permite que la IA procese el texto.
+Google Drive: Si deseas guardar tus audios directamente en la nube, conecta tu cuenta de Google en la sección de "Google Drive" dentro de Ajustes.
+
+3. PROCEDIMIENTO DE USO
+Sigue estos pasos para obtener resultados perfectos:
+Paso A: Grabar o Subir
+Grabar: Pulsa el botón del micrófono para empezar a hablar. Puedes pausar y reanudar si necesitas un respiro.
+Subir: Si ya tienes un archivo (MP3, WAV, M4A, etc.), arrástralo a la ventana o usa el botón de "Subir archivo".
+Paso B: Editar y Recortar
+Usa el editor de ondas visual para seleccionar fragmentos del audio.
+Eliminar selección: Útil para quitar silencios largos o errores.
+Mantener selección: Útil para procesar solo una parte específica de una grabación larga.
+Paso C: Procesar con IA
+Elige un Modo de Refinamiento (Estándar, Formal, Email, Lista, Creativo o Literal).
+Selecciona el Idioma del audio original.
+Pulsa "Limpiar con IA" o "Traducir". La IA generará una versión perfecta del texto.
+Paso D: Interactuar y Exportar
+Transcripción Interactiva: Haz clic en cualquier palabra del texto para saltar a ese momento exacto en el audio.
+Exportar: Una vez conforme, usa el botón de exportar para guardar en formato TXT, Markdown o subir el audio a Google Drive.
+
+4. FUNCIONES AVANZADAS
+Modo Presentación: Haz clic en "Presentar" para abrir una vista de lectura limpia, ideal para revisar textos largos o dar discursos. Puedes cambiar el tema (Claro, Oscuro, Sepia).
+Historial Offline: Tus transcripciones se guardan automáticamente en el navegador. Puedes buscarlas y recuperarlas en la pestaña de "Historial" incluso si cierras la app.
+Límite de Tiempo: La aplicación está optimizada para procesar audios de hasta 15 minutos de duración para garantizar la mejor calidad de IA.
+
+Especificación Técnica Maestra
+Este es el Documento Maestro de Especificación Técnica de Dictafono AI. Está diseñado para servir como la "fuente de verdad" para migrar el proyecto a una arquitectura full-stack profesional y continuar su desarrollo en cualquier plataforma de IA o entorno de ingeniería.
+
+🎙️ DICTAFONO AI: Especificación Técnica Maestra
+Dictafono AI es una aplicación de productividad de alto rendimiento para la captura y refinamiento de audio mediante Inteligencia Artificial.
+1. Stack Tecnológico Actual
+Lenguaje: TypeScript.
+Framework Frontend: React 18 con Vite.
+Estética y UI: Tailwind CSS (utilizando el plugin oficial de @tailwindcss/vite).
+Animaciones: Framer Motion (motion/react) para transiciones fluidas de UI y estados de carga.
+Iconografía: Lucide React.
+Procesamiento de Audio: Web Audio API (procesamiento en tiempo real y offline).
+IA: Integración con Groq (Whisper para transcripción, Llama-3 para limpieza) y Gemini.
+
+2. Configuración Técnica de Audio (El "Motor" DSP)
+La aplicación incluye un sistema de procesamiento de señales digitales (DSP) para garantizar que la IA reciba el audio más limpio posible.
+Cadena de Procesamiento (DenoiseAudio):
+Se utiliza un OfflineAudioContext para procesar el audio de forma no destructiva antes de enviarlo a la IA:
+Filtro High-pass (150Hz): Elimina ruidos sordos de baja frecuencia y golpes accidentales en el micro.
+Filtro Notch (50Hz/60Hz): Elimina el zumbido eléctrico de la red (ajustado automáticamente según el idioma/región del usuario).
+Filtro Peaking (3kHz, +4dB): Realza las frecuencias de la voz humana para mejorar la inteligibilidad.
+Filtro Low-pass (7000Hz): Elimina el siseo de alta frecuencia y ruidos digitales.
+Compresor Dinámico:
+threshold: -32dB
+ratio: 15 (Agresivo para normalizar voces lejanas o susurros).
+attack: 0.002s (Inmediato).
+
+Puerta de Ruido (Noise Gate): Implementada mediante un WaveShaperNode con una curva personalizada para silenciar completamente cualquier sonido por debajo de una amplitud de 0.015.
+
+3. Inteligencia Artificial: Prompts y Lógica Funcional
+A. Limpieza de Texto (Refinement)
+Propósito: Transformar transcripciones crudas (con muletillas, tartamudeos y errores) en textos profesionales, manteniendo la sincronización temporal de cada palabra.
+Prompt Maestro (Ejemplo Modo Ultra-Clean):
+"Eres un experto en reducción de ruido lingüístico y limpieza profunda. Tu tarea es actuar como un filtro de IA sofisticado: elimina absolutamente todas las muletillas, tartamudeos, repeticiones, frases incompletas y ruidos de fondo transcritos. Reconstruye las oraciones para que sean perfectas, fluidas y de alta calidad, pero manteniendo estrictamente la información original. Devuelve SOLO el JSON solicitado."
+Lógica de Sincronización:
+El sistema envía a la IA no solo el texto, sino un array de objetos tipo Word (
+errorEncountered retryable error from model provider: Agent execution terminated due to error.
+palabra + tiempo de inicio/fin). La IA debe devolver un JSON con el texto limpio y un nuevo array syncedWords que reasigne los tiempos originales a las nuevas frases procesadas para permitir la interactividad del audio.
+B. Resumen y Puntos Clave
+Propósito: Sintetizar el contenido para una revisión rápida.
+Prompt de Resumen:
+"Eres un experto en síntesis de información. Tu tarea es generar un resumen ejecutivo conciso y una lista de puntos clave a partir del texto proporcionado. Devuelve un JSON con 'summary' (string) y 'keyPoints' (array)."
+
+4. Integraciones y Persistencia
+Google Drive
+Actualmente implementado vía OAuth (Implicit Flow) para el lado del cliente:
+Flujo: El usuario se autentica -> Recibe un Bearer Token -> La app sube el .wav y el .txt refinado directamente.
+Limitación actual: Sube a la raíz.
+Evolución requerida: Migrar a un flujo de backend (Google Auth Library) para permitir el manejo del refresh_token, navegación de carpetas y persistencia de archivos a largo plazo.
+Persistencia Actual
+Todo reside en localStorage mediante hooks de React que sincronizan el estado con el almacenamiento.
+El historial guarda: Audio (vía IndexDB o Blob URL), Transcripción Cruda, Texto Refinado, Resumen y Puntos Clave.
+
+5. Hoja de Ruta para el Próximo Desarrollador (Instrucciones para la IA)
+Para continuar el diseño en Google Antigravity o similar, sigue estas directivas:
+Mantén la "Estética Polaca": La app depende de los micro-detalles. No quites las sombras suaves (shadow-lg), el desenfoque de los fondos (backdrop-blur) ni las formas orgánicas (rounded-[2.5rem]).
+Migración a Backend: Sustituye el localStorage por una base de datos (PostgreSQL/Supabase o Firebase). Crea esquemas para Users, Recordings (vinculadas a Google Drive File IDs) y Settings.
+Sistema de Pagos: Implementa una pasarela (Stripe/PayPal) vinculada a créditos de procesamiento de audio o una suscripción mensual.
+Audio Pro: Asegúrate de que cualquier nueva interfaz para el editor de ondas use WaveSurfer.js para mantener la capacidad de "Eliminar/Mantener" regiones del audio.
+Accesibilidad: Asegúrate de que el "Modo Presentación" siga siendo navegable por teclado y mantenga sus tres temas visuales (Claro, Oscuro, Sepia).

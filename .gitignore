@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+dist_electron/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+guardalinks/
+*.zip
+dictafononueva-main*
+Instalador_Windows/
+*.exe
+*.apk
+
+

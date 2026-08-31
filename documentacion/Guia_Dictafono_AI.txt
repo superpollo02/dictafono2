@@ -1,0 +1,76 @@
+--- PAGE 1 ---
+Dictafono con IA
+Guia de usuario - Configuracion y uso paso a paso
+Que es Dictafono AI
+Dictafono AI es una herramienta de productividad que transforma audio en texto de manera
+automatica usando inteligencia artificial. Permite grabar, transcribir, limpiar y exportar en un solo
+flujo, sin pasar por multiples aplicaciones ni pasos intermedios.
+Ideal para profesionales, docentes, estudiantes y cualquier persona que piense mejor hablando que
+escribiendo.
+Como acceder
+La app esta disponible desde cualquier navegador, sin instalacion:
+https://dictafonov4.vercel.app/
+Configuracion inicial
+Antes de usar la app por primera vez, completar estos dos pasos desde el icono de engranaje
+(Ajustes) en la esquina superior de la pantalla:
+Paso 1 - API Key de Groq
+La app utiliza la IA de Groq para procesar el audio. Es necesario obtener una API key gratuita y
+pegarla en el campo correspondiente dentro de Ajustes.
+Como obtener la API key:
+1. Buscar en internet: Groq API key free
+2. Crear una cuenta en el sitio de Groq (es gratuita)
+3. Generar la API key desde el panel de usuario
+4. Copiarla y pegarla en Ajustes dentro de la app
+Referencia: https://www.geeksforgeeks.org/artificial-intelligence/how-to-get-a-groq-api-key/
+Paso 2 - Google Drive (opcional)
+Si se desea guardar audios o exportar transcripciones directamente a Google Drive, conectar la
+cuenta de Google desde la seccion correspondiente en Ajustes.
+Uso paso a paso
+Paso A - Grabar o subir audio
+Grabar: Pulsar el boton del microfono para iniciar la grabacion. Es posible pausar y reanudar.
+La app admite hasta 15 minutos de audio por sesion.
+Subir archivo: Arrastrar un archivo existente a la ventana o usar el boton 'Subir archivo'.
+Formatos compatibles: MP3, WAV, M4A, entre otros.
+Paso B - Editar y recortar (opcional)
+
+--- PAGE 2 ---
+El editor de ondas visual permite seleccionar fragmentos del audio antes de procesar:
+Eliminar seleccion: util para quitar silencios largos o errores.
+Mantener seleccion: util para procesar solo una parte de una grabacion larga.
+Paso C - Procesar con IA
+Seleccionar el Modo de Refinamiento segun el tipo de texto que se necesita, y el idioma del audio
+original:
+Modo
+Para que sirve
+Estandar
+Transcripcion limpia de uso general
+Formal
+Textos profesionales o administrativos
+Email
+Redaccion de correos electronicos
+Lista
+Convierte el audio en una lista de puntos
+Creativo
+Textos con mayor elaboracion narrativa
+Literal
+Transcripcion exacta sin modificaciones
+Para traducir el texto a otro idioma, usar el boton Traducir en lugar de 'Limpiar con IA'.
+Paso D - Revisar, interactuar y exportar
+Transcripcion interactiva: al hacer clic en cualquier palabra del texto generado, el audio salta
+automaticamente a ese momento exacto. Util para verificar o corregir.
+Exportar: una vez conforme con el resultado, guardar en formato TXT, Markdown o subir
+directamente a Google Drive.
+Funciones avanzadas
+Modo Presentacion
+Hacer clic en 'Presentar' para abrir una vista de lectura limpia, sin distracciones. Disponible en tres
+temas: Claro, Oscuro y Sepia. Util para revisar textos largos o preparar una exposicion.
+Historial offline
+Las transcripciones se guardan automaticamente en el navegador. Se pueden buscar y recuperar
+desde la pestana 'Historial', incluso despues de cerrar la app. No requiere conexion ni cuenta para
+acceder al historial.
+Nota: la app esta optimizada para audios de hasta 15 minutos. Para grabaciones mas largas, se
+recomienda dividir el audio en segmentos antes de procesar.
+
+--- PAGE 3 ---
+Mariano | IA para el Lifelong Learning | Herramienta construida con vibe coding | Compartida libremente
+

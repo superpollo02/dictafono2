@@ -1,0 +1,1154 @@
+
+ersion posteo 1 linkedin
+posteo “dictafono”
+
+procedimiento que aplioque para crearla 
+diseñé la app en google Ai Studio 
+luego la conecte con repositorio github
+la implemente como proyecto en Vercel conectandola desde a cuenta de github para hacerla accesible a terceros
+
+Instrucciones para que la usen:
+Tener en cuenta: dado que usa una apikey de IA, y que este es un proyecto puramente de aprendizaje y no es una app comercial
+para usarla el usuario debe gestionarse por su cuenta una apikey de groq que son gratuitas, y para el volumen de tokens o de datos involucrados sobra
+
+Cómo  buscar en internet groq apikey free, generar usuario y la apikey anotarla y ponerla en la configuración de está app: 
+https://www.geeksforgeeks.org/artificial-intelligence/how-to-get-a-groq-api-key/#:~:text=Generar%20la%20clave%3A,de%20la%20llave%20m%C3%A1s%20adelante.
+
+ 
+
+Este “experimento” que es el objeto de este texto, tiene como propósito  mostrar cómo crear una alternativa de emprendimiento  para competir con las aplicaciones comerciales. Nada más lejos de eso. 
+pongamoslo así, se puede incluir dentro de la cultura del “hágalo Ud mismo”.
+Durante el aislamiento de la pandemia descubrimos que lo impensable podía pasar, pero por sobre todo que la “masa madre”, que existe desde milenios, sirve para reemplazar la levadura. propios panes. Si uno no quiere contratar un pintor, están todas las facilidades para hacerlo uno mismo. 
+Podemos pintar nuestra propia casa, hacernos pan, empanadas y un montón de cosas que puedes comprar o conseguir en establecimientos comerciales.pero sabiendo que no son iguales.
+Creo que con el software también se puede hacer esto. Es más, es como se hacía antes de los diskettes.
+En los años ochenta con la cz 1500 la única manera de jugar era copiando el código Basic que venía en revistas españolas  de computadoras y apretar la tecla “run”.
+Es una manera de involucrarse más en el proceso desde el lugar del usuario, de tener algo que, no es tan profesional como las apps comerciales pero qué es exactamente buscar lo que uno quiere más que aceptar lo que el mercado ofrece.
+
+Para redactar uso como primer “lienzo” un skill de redactor que cree para Claude, al que le subo lo que le dicté a “Dictáfono”. Continuo su estructura pero termino de adaptarlo a mi lenguaje escrito.
+El audio fue grabado esperando el semáforo en rojo. Luego aprieto el botón de terminar y la aplicación lo procesa. Puede grabar hasta 15 minutos de audio,  para una versión gratuita es una barbaridad.
+Da opciones de versión de texto para descargar. La desgrabación exacta o la versión  trabajada por la IA de la app. La subo a Google docs para seguir editando hacia mi forma de escribir. La próxima versión de la app va a incluir exportación directa a google drive y algo más. la información sobre el autor y formas de contactarme para enviar feedback de su uso.
+Porque como la pensé para usarla solo yo inicialmente no lo tuve en cuenta. Una vez terminada me pareció de utilidad para otros y sobre todo para tener feedback sobre como mejorarla.
+
+Usenla, y espero sus comentarios para hacerle mejoras y modificaciones.
+la pueden probar en  https://dictafonov4.vercel.app/
+
+posteo mio
+SUbstack
+Lancé una app de dictáfono con IA — y la hice sin saber programar
+No sé programar. Mi experiencia en código se limita a BASIC en los 80. Nada más.
+Y sin embargo, acabo de lanzar una app web funcional de dictáfono con transcripción por IA, disponible para cualquiera con un link.
+¿Cómo? Con vibe coding: una forma de construir software donde vos describís en lenguaje natural lo que querés, y una IA genera el código por vos. Sin escribir una sola línea a mano. Solo ideas, instrucciones y iteración.
+El proceso fue este: creé la app en Google AI Studio, la conecté a un repositorio en GitHub y la desplegué en Vercel para que sea accesible desde cualquier navegador.
+Para usarla necesitás una cosa: una API key de Groq, que es gratuita y la gestionás vos mismo en pocos minutos.
+👉 Buscá "Groq API key free" → creá tu cuenta → generá tu key → pegála en la configuración de la app. Con el volumen de uso típico, el plan gratuito sobra.
+Es un proyecto de aprendizaje, no comercial. Por eso opté por este modelo: cada usuario administra su propia clave, sin depender de infraestructura mía.
+instructivo de configuración y de uso:  👉 https://dictafono-ai-qxsnswy.gamma.site/
+Probala acá 👇 🔗 https://dictafonov4.vercel.app/
+Si la usás, dejame tu comentario en esta publicación. Ese feedback es lo que necesito para seguir mejorándola.
+
+
+
+Creado con vibe coding · IA generativa como herramienta de desarrollo
+#vibecoding #iagenerativa #productividad #herramientasIA #lifetlonglearning
+
+
+
+
+A minimalist flat design illustration of a vintage microphone or voice recorder transforming into a digital waveform, connected to glowing neural network nodes, representing AI-powered transcription. Clean tech aesthetic, dark navy blue background with electric blue and white accents, subtle gradient light. No text. Modern, professional, conceptual. 16:9 format, high quality digital illustration.
+
+Prompt alternativo (más humano/narrativo, si querés algo más cálido):
+A person speaking into a smartphone, with sound waves visually converting into written text on a floating screen beside them. Flat design style, warm color palette with blues and yellows, clean background. Symbolic of voice-to-text AI technology. No text in image. Professional editorial illustration style.
+
+Recomendación: para LinkedIn el formato ideal es 1200 × 627 px (16:9)
+
+obs
+
+Vibe coding: la producción autónoma de herramientas digitales como competencia emergente
+El desarrollo de aplicaciones mediante lenguaje natural representa un cambio sustantivo en el acceso a la creación de software. Más allá de sus resultados técnicos, el proceso involucra dimensiones de diseño y pensamiento computacional relevantes para la formación continua.
+
+Un cambio en los supuestos sobre quién puede crear software
+La producción de software ha estado históricamente condicionada por una barrera técnica precisa: el dominio de lenguajes de programación formales. Esta condición delimitó durante décadas quiénes podían crear herramientas digitales y quiénes únicamente podían utilizarlas.
+El vibe coding modifica ese supuesto. Se trata de una metodología de desarrollo en la que el usuario describe en lenguaje natural las características y funciones de la aplicación que necesita, y un modelo de inteligencia artificial generativa produce el código correspondiente. El proceso es iterativo: el usuario evalúa el resultado, identifica discrepancias entre lo esperado y lo obtenido, reformula sus indicaciones, y el ciclo continúa hasta alcanzar un producto funcional.
+El término, de reciente circulación en comunidades de tecnología, nombra una práctica que se está extendiendo con rapidez entre usuarios sin formación técnica formal.
+
+El proceso como objeto de análisis
+A modo de caso ilustrativo, el autor de este artículo —cuya experiencia en programación se limita al uso de BASIC en la década de 1980— desarrolló mediante vibe coding una aplicación de dictáfono con transcripción por inteligencia artificial. El flujo de trabajo incluyó el desarrollo inicial en Google AI Studio, la vinculación del proyecto a un repositorio en GitHub y su posterior despliegue en Vercel, lo que permitió que la aplicación quedara accesible públicamente desde cualquier navegador.
+Lo relevante no es el resultado en sí —una herramienta de alcance limitado y sin pretensiones comerciales— sino lo que el proceso pone en evidencia: que la creación de software funcional ya no requiere, como condición necesaria, el dominio técnico de la programación.
+
+Diseño centrado en el usuario como consecuencia no prevista
+Un aspecto significativo del vibe coding es que obliga a quien desarrolla a adoptar, aunque sea de manera implícita, una perspectiva de diseño centrado en el usuario.
+El diseño de experiencia de usuario —UX, por su sigla en inglés— es la disciplina que analiza cómo una persona interactúa con un producto digital: qué información necesita en cada etapa, qué acciones debe poder realizar, qué elementos generan fricción o confusión. Cuando se construye una herramienta para uso propio o ajeno, estas preguntas se vuelven operativas e inevitables: ¿qué debe encontrar el usuario al iniciar la aplicación? ¿Qué pasos son necesarios y cuáles redundantes? ¿Qué información previa requiere para utilizarla correctamente?
+Este ejercicio de pensamiento no emerge naturalmente del uso de herramientas ajenas. Es la posición de quien diseña —aunque sea de forma rudimentaria— la que lo genera. En ese sentido, el vibe coding produce, como subproducto del proceso de desarrollo, una aproximación práctica al pensamiento de diseño.
+
+Alcances y limitaciones del enfoque
+Las aplicaciones producidas mediante vibe coding presentan limitaciones técnicas evidentes frente a soluciones de desarrollo profesional: menor robustez, ausencia de soporte sistemático, escalabilidad reducida y mayor exposición a errores no detectados. Reconocer estas limitaciones es necesario para situar correctamente el valor del enfoque.
+Su pertinencia no reside en la competencia con herramientas comerciales, sino en una dimensión diferente: la posibilidad de construir soluciones a medida para necesidades específicas, sin depender de que un tercero haya previsto esa necesidad y desarrollado una respuesta. Una herramienta construida por quien la va a usar incorpora, por definición, un conocimiento del problema que difícilmente esté presente en una solución genérica. Adicionalmente, el proceso de construcción constituye en sí mismo una instancia de aprendizaje que el uso de herramientas externas no puede reemplazar.
+
+Implicancias para la formación y el desarrollo de competencias digitales
+La posibilidad de que docentes y formadores construyan sus propias herramientas pedagógicas tiene consecuencias que exceden la dimensión instrumental.
+Quien utiliza tecnología sin comprenderla la trata necesariamente como una caja negra: opera sobre ella sin acceso a la lógica que la estructura, sin capacidad de modificarla y sin posibilidad de evaluar críticamente las decisiones de diseño que contiene. Cada aplicación es el resultado de elecciones —sobre qué funciones incluir, qué flujos privilegiar, qué usuarios imaginar— tomadas por quienes la desarrollaron, con criterios que pueden no coincidir con las necesidades de quienes la usan.
+Quien construye, en cambio, aunque sea una herramienta de alcance reducido, adquiere una comprensión diferente de esa lógica. Entiende que el diseño implica decisiones, que esas decisiones tienen fundamentos y que pueden ser cuestionadas. Esa comprensión produce una relación más activa y reflexiva con la tecnología: no de desconfianza, sino de lectura crítica.
+En el marco del desarrollo de competencias digitales para la formación continua, esa capacidad de lectura crítica constituye un objetivo en sí mismo, independientemente de la calidad técnica de las herramientas producidas.
+
+Conclusión
+El vibe coding no forma desarrolladores de software en el sentido técnico del término. Lo que sí produce —cuando se lo aborda con una intención formativa— es una experiencia de pensamiento computacional aplicado, diseño orientado al usuario y comprensión crítica de la tecnología. Tres competencias que el consumo de herramientas digitales, por sí solo, raramente desarrolla.
+
+Texto elaborado con asistencia de Claude · Mariano · IA para el Lifelong Learning
+#vibecoding #iagenerativa #competenciasdigitales #pensamientocomputacional #lifelonglearning
+
+¿Lo aprobás así o ajustamos algo?
+
+newsletter lik
+El "hágalo usted mismo" llegó al software
+El vibe coding permite describir lo que necesitás en lenguaje natural y dejar que la IA lo construya. Una experiencia práctica que además obliga a pensar como diseñador: ¿qué necesita realmente el usuario?
+
+Programar ya no es el cuello de botella
+Durante décadas, la barrera para crear software fue técnica: si no sabías programar, dependías de quien sí sabía. Esa ecuación está cambiando. El vibe coding —término que describe la práctica de construir aplicaciones describiendo lo que se necesita en lenguaje natural, sin escribir código manualmente— permite que cualquier persona con una idea clara pueda producir una herramienta funcional con ayuda de la IA.
+No es magia ni simplificación engañosa. Es un cambio real en quién puede construir qué.
+
+Qué es el vibe coding, en términos simples
+La analogía más directa es la del artesano que encarga una pieza a un taller: describe qué necesita, para qué la va a usar, qué forma debe tener. El taller ejecuta. El artesano revisa, corrige, pide ajustes. El resultado final es suyo aunque no haya operado la maquinaria.
+En el vibe coding, ese "taller" es un modelo de IA generativa al que se le describe la aplicación en lenguaje cotidiano. La IA genera el código. El usuario evalúa si funciona como esperaba, señala lo que no cierra, y el proceso continúa en iteraciones sucesivas hasta llegar a algo usable.
+Mi formación en código se limita a BASIC en los años 80. Con ese bagaje, y usando esta metodología, construí una app de dictáfono con transcripción por IA: la desarrollé en Google AI Studio, la conecté a un repositorio en GitHub y la desplegué en Vercel para que fuera accesible desde cualquier navegador. El proceso fue completamente iterativo, conversacional, y no requirió escribir una sola línea de código a mano.
+
+El "hágalo usted mismo" llegó al software
+Este experimento no tiene como propósito competir con aplicaciones comerciales ni presentarse como una alternativa de emprendimiento. Se inscribe, más bien, en la cultura del "hágalo usted mismo".
+Durante la pandemia descubrimos que lo impensable podía pasar — y también que la masa madre, que existe desde milenios, servía para reemplazar la levadura. Que si uno no quería contratar un pintor, estaban todas las facilidades para hacerlo uno mismo. Podemos pintar nuestra propia casa, hacernos pan, empanadas, y un montón de cosas que también se consiguen en establecimientos comerciales. Sabiendo que no son iguales, pero que son exactamente lo que uno quería.
+Con el software se puede hacer lo mismo. Es más, es como se hacía antes de los diskettes. En los años 80, con la CZ 1500, la única manera de jugar era copiando el código BASIC que venía en revistas españolas de computadoras y apretar la tecla "run".
+Es una manera de involucrarse más en el proceso desde el lugar del usuario: tener algo que no es tan profesional como las apps comerciales, pero que es exactamente lo que uno busca — en lugar de aceptar lo que el mercado ofrece.
+
+El aprendizaje inesperado: pensar desde el usuario
+Lo que no anticipé es que construir una herramienta propia obliga a hacer UX sin saberlo.
+UX —experiencia de usuario— es la disciplina que se pregunta cómo alguien va a interactuar con un producto: qué necesita encontrar, qué pasos va a dar, qué puede confundirlo. Cuando uno construye para otros, esas preguntas se vuelven inevitables. ¿Qué tiene que hacer el usuario cuando abre la app por primera vez? ¿Qué información necesita para empezar? ¿Qué sobra?
+Esa reflexión no aparece cuando se usa una herramienta ajena. Aparece cuando se construye una propia. Y es un tipo de pensamiento que tiene valor en sí mismo, más allá del resultado.
+Un ejemplo concreto: como la pensé inicialmente para uso propio, no incluí información sobre el autor ni formas de contacto para enviar feedback. Una vez terminada, cuando me pareció útil para otros, me di cuenta de que era lo primero que faltaba. La próxima versión lo va a incluir — junto con exportación directa a Google Drive.
+
+Cómo la uso en la práctica
+Grabo audio esperando el semáforo en rojo. Cuando termino, aprieto el botón y la app lo procesa. Puede grabar hasta 15 minutos — para una versión gratuita, es una barbaridad.
+Da dos opciones de descarga: la desgrabación exacta o una versión trabajada por la IA. La subo a Google Docs y la adapto a mi forma de escribir. De hecho, este texto empezó así: dictado a la app, procesado por un skill de redacción que creé para Claude, y terminado de adaptar a mano.
+
+El valor del "hacelo vos mismo" y sus límites reales
+Una app construida con vibe coding no va a competir con soluciones comerciales en términos de robustez, escalabilidad o soporte técnico. Eso no es una falla del método: es una característica del propósito.
+El valor de estas herramientas no está en la potencia sino en la pertinencia. Una app construida para una necesidad específica, por quien tiene esa necesidad, resuelve exactamente lo que hace falta resolver — sin funciones innecesarias, sin curvas de aprendizaje ajenas, sin depender de que un proveedor externo decida mantener o discontinuar el servicio. Y el proceso de construirla es el aprendizaje: no hay forma de llegar al resultado sin entender, al menos parcialmente, qué se está haciendo y por qué.
+
+Implicancias para docentes y formadores
+Si un docente puede construir su propia herramienta pedagógica, cambia su relación con la tecnología. Pero vale la pena explicar por qué.
+Quien usa herramientas ajenas las trata, inevitablemente, como cajas negras: funcionan o no funcionan, se adaptan o no se adaptan, y en cualquier caso la decisión de cambiarlas no está en sus manos. Quien construye aunque sea una herramienta simple empieza a entender la lógica detrás: qué decisiones implica diseñar algo, qué supuestos hay en cada interfaz, por qué ciertos flujos son más intuitivos que otros.
+Eso produce una relación más activa y crítica con la tecnología. No en el sentido de desconfianza, sino en el de comprensión: saber que detrás de cada aplicación hay decisiones de diseño tomadas por alguien, con determinados criterios, para determinados usuarios. Y que esos criterios pueden no coincidir con los propios.
+En contextos de formación, esa comprensión es una competencia. No reemplaza el uso de herramientas consolidadas, pero lo complementa de una manera que el uso solo nunca puede producir.
+
+Para cerrar
+El vibe coding no convierte a cualquier persona en desarrolladora de software. Sí le permite construir herramientas simples, funcionales y pertinentes para sus propias necesidades — y en el proceso, desarrollar una comprensión más profunda de qué significa diseñar tecnología para otros.
+Eso, en el contexto de la formación continua y las competencias digitales, no es un dato menor.
+Usenla, y dejen sus comentarios en esta publicación. El feedback es lo que necesito para seguir mejorándola.
+🔗 https://dictafonov4.vercel.app/
+
+Mariano · IA para el Lifelong Learning Texto elaborado con asistencia de Claude
+#vibecoding #iagenerativa #competenciasdigitales #hagaloudmismo #lifelonglearning
+
+¿Lo ajustamos o está listo?
+
+
+posteo linkedin
+https://www.linkedin.com/posts/mariano-fischer-18655415_my-google-ai-studio-app-activity-7449453003561914368-bhsc?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAMbPPYBrH_jCA6oESY064dkj4_7YSFCtCw
+
+
+
+Dictáfono con IA: una vuelta al "hagalo Ud. mismo"
+
+En los años ochenta, con la CZ 1500 (quien sepa que es una de esas favor de dejar comentario!), la única manera de jugar era copiando el código BASIC que venía en revistas españolas de computadoras y apretar la tecla "run".
+Eso era, en cierta forma, hacer software uno mismo. Creo que con el vibe coding volvimos a algo parecido — pero con mucho menos fricción.
+
+¿De qué se trata esto?
+Este experimento no tiene como propósito competir con aplicaciones comerciales ni presentarse como una alternativa de emprendimiento. Se inscribe, más bien, en la cultura del "hágalo usted mismo".
+Durante la pandemia descubrimos que la masa madre — que existe desde milenios — podía reemplazar la levadura. Que podíamos pintar nuestra propia casa, hacer pan, empanadas, y un montón de cosas que también se consiguen en establecimientos comerciales. Sabiendo que no son iguales, pero que son exactamente lo que uno quería.
+Con el software se puede hacer lo mismo. No es tan profesional como las apps comerciales, pero es exactamente lo que uno busca — en lugar de aceptar lo que el mercado ofrece.
+
+Cómo la construí
+Diseñé la app en Google AI Studio
+La conecté a un repositorio en GitHub
+La desplegué en Vercel para hacerla accesible a cualquiera
+
+Cómo la uso yo
+Grabo audio esperando el semáforo en rojo. Cuando termino, aprieto el botón y la app lo procesa. Puede grabar hasta 15 minutos — para una versión gratuita, es una barbaridad.
+Da dos opciones de descarga: la desgrabación exacta o una versión trabajada por la IA. La subo a Google Docs y la adapto a mi forma de escribir.
+De hecho, este texto empezó así: dictado a la app, procesado por un skill de redacción que creé para Claude, y terminado de adaptar a mano.
+La próxima versión va a incluir exportación directa a Google Drive — y los datos del autor para poder enviar feedback. Porque la pensé para uso propio y cuando me pareció útil para otros, me di cuenta de que no lo había incluido.
+
+Cómo usarla
+Como es un proyecto de aprendizaje y no comercial, cada usuario gestiona su propia API key. Las de Groq son gratuitas y para el volumen de uso habitual, sobran.
+👉 Cómo obtener tu API key de Groq: https://www.geeksforgeeks.org/artificial-intelligence/how-to-get-a-groq-api-key/
+Una vez que la tenés, la pegás en la configuración de la app y listo.
+🔗 Probala acá: https://dictafonov4.vercel.app/
+
+Usenla, y dejen sus comentarios en esta publicación. El feedback es lo que necesito para seguir mejorándola.
+
+Mariano · IA para el Lifelong Learning
+#vibecoding #iagenerativa #hagaloudmismo #productividad #lifelonglearning
+
+
+Pestaña 5
+
+
+
+substack
+
+Fabriqué una app sin saber programar. Lo que aprendí en el proceso vale más que la app.
+El vibe coding permite construir herramientas digitales usando solo lenguaje natural. Pero el aprendizaje real no está en el resultado — está en las preguntas que el proceso obliga a hacerse.
+
+Mi experiencia en programación se limita a BASIC en los años 80. Nada de lo que se usa hoy. Y sin embargo, hace poco lancé una aplicación web funcional de dictáfono con transcripción por inteligencia artificial, accesible desde cualquier navegador.
+No lo cuento como un logro técnico. Lo cuento porque el proceso me dejó pensando en algo que creo que vale la pena compartir con quienes trabajan en formación y educación: construir una herramienta, aunque sea simple, produce un tipo de aprendizaje que usarla nunca produciría.
+
+Qué es el vibe coding
+El vibe coding es una forma de desarrollar software describiendo en lenguaje natural lo que se necesita, y dejando que un modelo de inteligencia artificial generativa produzca el código. No hay sintaxis que aprender, no hay entorno de desarrollo que configurar. Hay una conversación: uno describe, la IA construye, uno evalúa, corrige, reformula. Y así sucesivamente hasta llegar a algo que funciona.
+La analogía que me resulta más clara es la del artesano que encarga una pieza a un taller especializado: describe qué necesita, para qué la va a usar, qué forma debe tener. El taller ejecuta. El artesano revisa y pide ajustes. El resultado final es suyo aunque no haya operado la maquinaria.
+En mi caso, el proceso fue este: desarrollé la app en Google AI Studio, la vinculé a un repositorio en GitHub y la desplegué en Vercel para que quedara accesible públicamente. Cada etapa implicó describir lo que necesitaba, evaluar el resultado y volver a iterar. Sin escribir una línea de código a mano.
+
+Lo que no anticipé: pensar como diseñador
+Lo que no tenía previsto es que construir una herramienta para que otros la usen obliga a hacerse preguntas que normalmente no aparecen cuando uno simplemente usa lo que otros construyeron.
+¿Qué encuentra el usuario cuando abre la app por primera vez? ¿Qué información necesita para empezar a usarla? ¿Qué pasos son necesarios y cuáles generan confusión innecesaria? ¿Qué sobra?
+Esas preguntas son, en esencia, las preguntas del diseño de experiencia de usuario. No las formulé con ese nombre mientras las pensaba. Pero estaban ahí, y no podía avanzar sin responderlas de alguna manera.
+Eso no ocurre cuando uno usa una herramienta ajena. Ocurre cuando uno construye. Y creo que esa diferencia importa.
+
+Una herramienta a medida no compite con las comerciales — y no tiene por qué
+La app que construí tiene limitaciones técnicas evidentes. No es robusta, no escala, no tiene soporte. Frente a cualquier solución comercial equivalente, pierde en casi todos los indicadores técnicos.
+Pero su propósito no es ese. Una herramienta construida para una necesidad específica, por quien tiene esa necesidad, resuelve exactamente lo que hace falta resolver. Sin funciones innecesarias, sin depender de que un proveedor externo haya imaginado ese caso de uso, sin quedarse atada a decisiones de diseño pensadas para otro tipo de usuario.
+Y además — esto es lo que más me interesa — el proceso de construirla es en sí mismo una instancia de aprendizaje. No hay forma de llegar al resultado sin entender, al menos parcialmente, qué se está haciendo y por qué.
+
+Por qué esto importa para quienes trabajamos en formación
+Si un docente o formador puede construir su propia herramienta pedagógica, algo cambia en su relación con la tecnología. Vale la pena detenerse en ese punto, porque la afirmación necesita desarrollo.
+Quien usa tecnología sin comprenderla la trata como una caja negra: opera sobre ella sin acceso a la lógica que la estructura, sin posibilidad de modificarla y sin herramientas para evaluar críticamente las decisiones de diseño que contiene. Cada aplicación que usamos es el resultado de elecciones — sobre qué funciones incluir, qué flujos privilegiar, qué usuarios imaginar — tomadas por quienes la desarrollaron, con criterios que pueden no coincidir con los nuestros.
+Quien construye, en cambio, aunque sea algo simple, empieza a leer esa lógica de otra manera. Entiende que el diseño implica decisiones, que esas decisiones tienen fundamentos, y que pueden ser cuestionadas. Eso produce una relación diferente con la tecnología: más activa, más reflexiva, más crítica.
+En el contexto de la formación continua y el desarrollo de competencias digitales, esa capacidad de lectura crítica es un objetivo en sí mismo. No reemplaza el uso de herramientas consolidadas, pero lo complementa de una manera que el uso solo nunca puede producir.
+
+Para cerrar
+El vibe coding no me convirtió en desarrollador. Sí me permitió construir algo útil, entender mejor qué implica diseñar para otros, y desarrollar una comprensión más concreta de la tecnología que uso y recomiendo.
+Si trabajás en educación o formación: ¿alguna vez construiste una herramienta propia, aunque sea mínima? ¿Qué cambió en tu forma de ver las herramientas que usás habitualmente? Me interesa leer sus experiencias en los comentarios.
+
+Mariano · IA para el Lifelong Learning Texto elaborado con asistencia de Claude
+#vibecoding #iagenerativa #competenciasdigitales #lifelonglearning #educacion
+
+¿Lo ajustamos o está listo para publicar?
+
+Pestaña 14
+Postero FBK
+
+Una vuelta al "hagalo Ud. mismo"
+
+En los años ochenta, con la CZ 1500 (quien sepa que es una de esas favor de dejar comentario!), la única manera de jugar era copiando el código BASIC que venía en revistas españolas de computadoras y apretar la tecla "run".
+Eso era, en cierta forma, hacer software uno mismo. Creo que con el vibe coding volvimos a algo parecido — pero con mucho menos fricción.
+Fabriqué una app sin saber programar. Lo que aprendí en el proceso vale más que la app.
+El vibe coding permite construir herramientas digitales usando solo lenguaje natural. Pero el aprendizaje real no está en el resultado — está en las preguntas que el proceso obliga a hacerse.
+
+Hace poco lancé  DICTÁFONO AI , una app que graba y transcribe audios con IA en segundos 
+La podes probar en 
+https://dictafono-ai-qxsnswy.gamma.site/ primero hay que leer el instructivo de configuración
+
+Es una aplicación web 100% gratuita, con transcripción por inteligencia artificial, accesible desde cualquier navegador.
+No lo cuento como un logro técnico. Lo cuento porque el proceso me dejó pensando en algo que creo que vale la pena compartir con quienes trabajan en formación y educación: construir una herramienta, aunque sea simple, produce un tipo de aprendizaje que usarla nunca produciría.
+No está pensada para competir con las apps comerciales sino es una vuelta al "hagalo Ud. mismo"
+
+Si trabajás en educación o formación: ¿alguna vez construiste una herramienta propia, aunque sea mínima? ¿Qué cambió en tu forma de ver las herramientas que usás habitualmente? Me interesa leer sus experiencias en los comentarios.
+Pestaña 9
+A person speaking into a smartphone, with sound waves visually converting into written text on a floating screen beside them. Flat design style, warm color palette with blues and yellows, clean background. Symbolic of voice-to-text AI technology. No text in image. Professional editorial illustration style.
+
+A minimalist flat design illustration of a vintage microphone or voice recorder transforming into a digital waveform, connected to glowing neural network nodes, representing AI-powered transcription. Clean tech aesthetic, dark navy blue background with electric blue and white accents, subtle gradient light. No text. Modern, professional, conceptual. 16:9 format, high quality digital illustration.
+GUÍA DE USUARIO - DICTAFONO AI}
+🎙️ Dictáfono con IA 
+¿Cómo es el flujo para desgrabar un audio? 
+Era así: grabás un audio en el teléfono, después tenés que subirlo a Google Drive, abrirlo con chatgpt, o Gemini para que lo transcriba, copiarlo, pegarlo en otro lado. Varios pasos, varios minutos, varias chances de que el flujo se corte. 
+Dictáfono lo hace todo junto: grabás, apretás el botón, y obtenés el texto. Hasta 15 minutos de grabación. Dos opciones de salida: la transcripción exacta o una versión procesada por IA. 
+Para quienes piensan mejor hablando que escribiendo. 
+👉 https://dictafonov4.vercel.app/ 
+(Requiere API key de Groq gratuita — las instrucciones están en la guía del usuario)
+
+GUÍA DE USUARIO - DICTÁFONO AI
+1. ¿QUÉ ES DICTÁFONO AI?
+Dictáfono es una herramienta avanzada de productividad diseñada para transformar tus pensamientos hablados en documentos profesionales listos para compartir. Utiliza inteligencia artificial de vanguardia para transcribir, limpiar y estructurar tus audios de manera automática.
+Utilidad
+Ideal para profesionales, estudiantes y creadores que necesitan capturar ideas, reuniones, entrevistas o clases sin perder tiempo en transcripciones manuales.
+Porque... 
+Elimina muletillas: borra automáticamente los "eh...", "este...", repeticiones y errores gramaticales.
+Ahorra tiempo: evita horas de escritura manual transcribiendo audios en segundos.
+Organización: transforma notas de voz desordenadas en textos estructurados (emails, listas, actas).
+
+2. CONFIGURACIÓN INICIAL
+Dado que se trata de proyecto de aprendizaje y no comercial, cada usuario gestiona su propia API key. Las de Groq son gratuitas y para el volumen de uso habitual, sobran.
+API Key: Ir a la sección de "Ajustes" (icono de engranaje). Asegúrate de que el sistema esté conectado. Si usas tu propia llave de Groq, pégala en el campo correspondiente. Esto es lo que permite que la IA procese el texto.
+👉 Cómo obtener  una API key de Groq: https://www.geeksforgeeks.org/artificial-intelligence/how-to-get-a-groq-api-key/
+
+3. PROCEDIMIENTO DE USO
+
+Paso A: 
+Grabar: pulsar el botón del micrófono para empezar a hablar. Se puede pausar y reanudar.
+Subir: arrastrar a la ventana o usar el botón de "Subir archivo".
+Paso B: elegir un Modo de Refinamiento (Estándar, Formal, Email, Lista, Creativo o Literal) y procesar.
+Paso C: usar el botón de exportar para guardar la versión original o refinada en formato TXT, Markdown.
+
+
+Está aplicación es de uso gratuito y es parte de un proceso de aprendizaje. No tiene como propósito competir con aplicaciones comerciales ni presentarse como una alternativa de emprendimiento. Se inscribe, más bien, en la cultura del "hágalo usted mismo".
+
+La pongo a disposición de quien la quiera usar. Sin costo, sin registro, sin condiciones.
+Lo que pido a cambio
+Nada económico. Lo que necesito es feedback real: qué funciona, qué no, qué le falta, qué sobra. Cada comentario es insumo para mejorarlas.
+
+feedback a 
+@educaailatam@gmail.com
+
+
+
+
+posteo
+
+El audio que nunca transcribiste. La nota formal que te llevó una hora. El cuestionario que nadie quiso responder. Tengo algo para cada uno de esos problemas.
+Tres herramientas construidas con vibe coding, sin presupuesto y sin equipo. Las comparto libremente — lo único que pido a cambio es feedback.
+
+Hace un tiempo empecé a construir mis propias herramientas digitales usando vibe coding: describiendo lo que necesitaba en lenguaje natural y dejando que la IA generara el código. Lo que empezó como experimentación personal terminó en herramientas que uso en mi trabajo cotidiano.
+Las pongo a disposición de quien las quiera usar. Sin costo, sin registro, sin condiciones.
+
+Las herramientas
+🎙️ Dictáfono con IA El problema: grabás un audio en el teléfono, después tenés que subirlo a Google Drive, abrirlo con Gemini para que lo transcriba, copiarlo, pegarlo en otro lado. Varios pasos, varios minutos, varias chances de que el flujo se corte. Dictáfono lo hace todo junto: grabás, apretás el botón, y obtenés el texto. Hasta 15 minutos de grabación. Dos opciones de salida: la transcripción exacta o una versión procesada por IA. Para quienes piensan mejor hablando que escribiendo. 👉 https://dictafonov4.vercel.app/ (Requiere API key de Groq gratuita — las instrucciones están dentro de la app)
+
+📝 Bot redactor administrativo El problema: redactar una nota formal para un sistema de expedientes electrónicos requiere un registro específico — formal, preciso, sin ambigüedades — que no es el que usamos cuando hablamos o escribimos informalmente. Traducir una idea coloquial a ese formato lleva tiempo y esfuerzo. El bot recibe la instrucción en lenguaje cotidiano y la transforma en una comunicación administrativa con la formalidad que el contexto requiere. Y como es un bot, se puede seguir iterando: ajustar el tono, cambiar el enfoque, mejorar el texto en la misma conversación. 👉 https://cdn.botpress.cloud/webchat/v3.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/17/01/20250717015011-JETYDC00.json
+
+🎪 Cuestionario estilo circo El problema: los cuestionarios digitales suelen ser formularios grises que nadie tiene ganas de responder. Para docentes y formadores, eso es un obstáculo real — no solo estético. Esta app muestra que un cuestionario puede tener otra cara: animado, visualmente llamativo, con una estética que invita a participar. No es un juguete — es una demostración de que la forma en que se presenta una evaluación impacta en cómo se recibe. 👉 https://carnival-quiz.vercel.app/
+
+Lo que pido a cambio
+Nada económico. Lo que necesito es feedback real: qué funciona, qué no, qué le falta, qué sobra. Cada comentario es insumo para mejorarlas.
+Y una pregunta que me interesa especialmente: ¿qué herramienta de este tipo te gustaría que existiera? ¿Qué problema pequeño y cotidiano en tu trabajo o en tu práctica docente todavía no tiene una solución simple?
+Dejame tu respuesta en los comentarios. La próxima herramienta puede salir de ahí.
+
+Mariano · IA para el Lifelong Learning Herramientas construidas con vibe coding · Compartidas libremente
+#vibecoding #iagenerativa #herramientasdigitales #educacion #lifelonglearning
+
+¿Lo ajustamos o está listo?
+
+Pestaña 11
+¡Entendido! Eso cambia completamente la estrategia y, de hecho, **es una ventaja competitiva enorme**. 🚀
+
+Cuando el creador promociona su propia herramienta, el mensaje gana en **autenticidad, autoridad y conexión emocional**. La gente no solo descarga una app, sino que **apoya a un desarrollador** y se convierte en parte del viaje.
+
+Aquí tienes la estrategia ajustada con el enfoque **"Creator-Led Growth"**:
+
+---
+
+## 📱 **POSTS PARA WHATSAPP - ENFOQUE CREADOR**
+
+### **Opción 1: Storytelling Personal (La más potente)**
+
+```
+👋 Hola, soy [Tu Nombre], creador de DICTÁFONO AI
+
+Hace unos meses estaba frustrado... 
+Pasaba HORAS transcribiendo audios manualmente 😤
+
+Así que decidí construir la solución que yo necesitaba.
+
+🎙️ Hoy te presento DICTÁFONO AI:
+✅ Hablas → Obtienes texto profesional
+✅ La IA elimina muletillas y errores automáticamente
+✅ Convierte notas de voz en emails, actas y listas
+✅ 100% GRATIS (porque quiero que la uses de verdad)
+
+💡 La construí para profesionales, estudiantes y creadores como tú.
+
+👉 Pruébala y dime qué opinas (tu feedback me ayuda a mejorar):
+👉 https://dictafono-ai-qxsnswy.gamma.site/
+
+🙏 *Si conoces a alguien que odie transcribir, ¿me ayudas a pasárselo?*
+```
+
+---
+
+### **Opción 2: Enfoque "Beta Tester / Comunidad"**
+
+```
+🚀 LANZAMIENTO EXCLUSIVO: DICTÁFONO AI
+
+Soy [Tu Nombre], desarrollador de esta app, y quiero invitarte a ser de los primeros en probarla.
+
+🎯 ¿Qué hace?
+Transforma tus audios en documentos profesionales usando IA:
+• Transcripción automática en segundos ⚡
+• Limpieza de muletillas y repeticiones 🧹
+• Estructura tu contenido (emails, actas, listas) 📋
+
+💰 Precio: 100% GRATIS (por ahora)
+
+🎁 Bonus: Los primeros usuarios tendrán acceso prioritario a nuevas funciones.
+
+🔗 Únete aquí: https://dictafono-ai-qxsnswy.gamma.site/
+
+💬 *¿Tienes ideas para mejorarla? ¡Respóndeme directamente!*
+Tu opinión moldea el futuro de Dictáfono 🛠️
+```
+
+---
+
+### **Opción 3: Enfoque Transparencia + Propósito**
+
+```
+💡 ¿Por qué DICTÁFONO AI?
+
+Porque creemos que tu tiempo vale más que transcribir audios.
+
+Desde EDUCAILATAM hemos desarrollado esta herramienta con una misión clara:
+✨ Devolverte horas de tu vida para que las uses en lo que realmente importa.
+
+🎙️ DICTÁFONO AI hace esto por vos:
+→ Convierte voz en texto profesional con IA
+→ Elimina automáticamente "ehhh", "esteee", repeticiones
+→ Organiza el resultado: emails, listas, actas listas para usar
+→ Todo en segundos, no en horas
+
+🎁 Es GRATIS porque quiero que llegue a quien lo necesite.
+      Es 100% basada en la Web. No hay que instalar nada
+
+👉 Link de acceso y configuracion en 👉 https://dictafono-ai-qxsnswy.gamma.site/
+
+🤝 *Si te sirve, ayúdame a compartirla con más personas.*
+*Cada descarga nos sirve para seguir mejorándola.* 
+```
+
+---
+
+### **Opción 4: Enfoque "Desarrollador Responde" (Para generar engagement)**
+
+```
+🤔 ¿Preguntas sobre DICTÁFONO AI? 
+Te responde el creador 👇
+
+Soy [Tu Nombre], desarrollador de la app. Aquí respondo las dudas más frecuentes:
+
+❓ ¿Es realmente gratis?
+✅ Sí, 100%. Sin letras chiquitas.
+
+❓ ¿Qué pasa con mi privacidad?
+✅ Tus audios se procesan de forma segura y no los almacenamos.
+
+❓ ¿Funciona en español?
+✅ ¡Sí! Está entrenada para entender acentos y modismos latinos.
+
+❓ ¿Puedo sugerir mejoras?
+✅ ¡Por favor! Escríbeme directamente. Esta app crece con ustedes.
+
+🎯 ¿Qué hace?
+Hablas → Texto profesional limpio y estructurado en segundos.
+
+🔗 Pruébala ahora: 👉 https://dictafono-ai-qxsnswy.gamma.site/
+
+💬 *¿Tienes otra pregunta? Respóndeme este mensaje y te contesto yo mismo.*
+```
+
+---
+
+## 🎨 **FOLLETO ADJUNTO - ACTUALIZADO**
+
+El flyer debe incluir elementos que refuercen tu rol como creador:
+
+| Elemento | Sugerencia |
+|----------|------------|
+| **Título principal** | "De tu voz a texto profesional en segundos" |
+| **Subtítulo emocional** | "Creado con ❤️ por [Tu Nombre] para devolverte tiempo" |
+| **Badge destacado** | "🎁 100% GRATIS - Sin suscripciones" |
+| **Sección features** | 3 íconos: 🎤→📝 / 🧹 Limpieza IA / 📋 Estructura automática |
+| **CTA principal** | "Pruébala ahora: [URL corta]" |
+| **Toque personal** | Foto tuya pequeña o firma: *"¿Feedback? Escríbeme directo"* |
+| **QR Code** | Enlace directo a la app para escaneo rápido |
+
+---
+
+## 🚀 **ESTRATEGIA DE LANZAMIENTO "CREATOR-LED"**
+
+### **Fase 1: Círculo de confianza (Días 1-3)**
+- Envía el post + flyer a amigos, familia y colegas cercanos.
+- Pide feedback genuino y que compartan si les gusta.
+- Responde personalmente cada mensaje: esto genera lealtad.
+
+### **Fase 2: Comunidades relevantes (Días 4-7)**
+- Comparte en grupos de: estudiantes, emprendedores, freelancers, periodistas.
+- Usa el enfoque: *"Hola, soy desarrollador y creé esto para resolver X problema..."*
+- Ofrece ayuda personalizada a quienes pregunten.
+
+### **Fase 3: Viralización orgánica (Día 8+)**
+- Pide explícitamente: *"Si te sirve, ¿me ayudas a pasárselo a 3 personas?"*
+- Crea un mensaje de reenvío fácil: *"Esto me lo pasó el creador, pruébalo 👇"*
+- Considera un pequeño incentivo: *"Los primeros 100 usuarios tendrán acceso prioritario a nuevas funciones"*.
+
+### **Bonus: Contenido de respaldo**
+Graba un audio corto (30 seg) tipo:
+> *"Hola, soy [Nombre], creador de Dictáfono. Si estás recibiendo esto, es porque alguien pensó que te podría ayudar. La app es gratis, la hice para ahorrarte tiempo transcribiendo. Pruébala y cuéntame qué opinas. ¡Gracias por apoyar el desarrollo independiente!"*
+
+🎙️ *Los audios personales tienen una tasa de conversión 3x mayor en WhatsApp.*
+
+---
+
+## 💡 **TIPS CLAVE PARA TI COMO CREADOR**
+
+1. **Firma siempre tus mensajes**: Que sepan que hablan con el desarrollador.
+2. **Pide feedback, no solo descargas**: La gente ama sentirse parte del proceso.
+3. **Sé transparente**: Si hay limitaciones, dilo. Genera confianza.
+4. **Responde rápido**: La atención personalizada es tu ventaja contra apps grandes.
+5. **Celebra los hitos**: *"¡Llegamos a 500 usuarios! Gracias por confiar en mi trabajo"* → genera comunidad.
+
+---
+
+¿Te gustaría que:
+1. Ajuste el tono (más formal, más cercano, más técnico)?
+2. Cree versiones para otras redes (Instagram, LinkedIn, Twitter)?
+3. Te ayude a redactar un mensaje de seguimiento para quienes respondan?
+
+¡Estoy aquí para ayudarte a hacer crecer Dictáfono! 🎯✨
+
+reddit
+dPerfecto! Aquí tienes versiones adaptadas para cada red social, manteniendo tu identidad como creador:
+
+---
+
+## 📸 **INSTAGRAM**
+
+### **Post Principal (Feed)**
+
+**Imagen sugerida:** Captura de pantalla de la app + texto superpuesto "De 2 horas a 30 segundos ⚡"
+
+**Caption:**
+
+```
+Hace 6 meses estaba frustrado 😤
+
+Pasaba HORAS transcribiendo audios de entrevistas y reuniones. Escribiendo lo mismo una y otra vez. Perdiendo tiempo valioso que podía usar para crear.
+
+Así que decidí hacer algo al respecto.
+
+🎙️ Creé DICTÁFONO AI
+
+Una herramienta que transforma tus audios en texto profesional usando inteligencia artificial:
+✨ Elimina muletillas automáticamente
+✨ Estructura el contenido (emails, actas, listas)
+✨ Resultados en segundos, no en horas
+✨ 100% GRATIS
+
+La construí para profesionales, estudiantes y creadores que valoran su tiempo tanto como yo.
+
+💡 ¿Lo mejor? Ver cómo le devuelve horas de vida a las personas que la usan.
+
+ Link en bio para probarla (o escribe "DICTÁFONO" en DM y te mando el link)
+
+👇 ¿Cuánto tiempo pasas transcribiendo? Cuéntame en los comentarios
+
+#ProductividadApp #InteligenciaArtificial #DesarrolladorIndependiente #AppGratis #VoiceToText #EmprendimientoDigital #TechLatam #IndieHacker #StartupLife #DictafonoAI
+```
+
+---
+
+### **Stories (Secuencia de 3-4 stories)**
+
+**Story 1:** 
+- Texto: "Confesión: Perdí 50+ horas el año pasado transcribiendo audios 😅"
+- Sticker: Encuesta "¿Te pasa?" Sí / También
+
+**Story 2:**
+- Texto: "Así que creé una app que lo hace por mí (y por ti)"
+- GIF: Cohete o cerebro
+
+**Story 3:**
+- Texto: "DICTÁFONO AI - 100% GRATIS"
+- Sticker: Link directo
+
+**Story 4:**
+- Texto: "¿Preguntas? Respondo por DM 💬"
+- Sticker: Cuestionario "¿Qué te gustaría saber?"
+
+---
+
+## 💼 **LINKEDIN**
+
+### **Post Profesional**
+
+```
+🚀 Lanzamiento: DICTÁFONO AI - La herramienta que hemos construido para resolver un problema real de productividad
+
+Hace unos meses identificamos un patrón ineficiente en el flujo de trabajo común en el equipo (y en el de muchos profesionales):
+
+❌ Grabamos ideas, reuniones y entrevistas en audio
+❌ Perdemos HORAS transcribiéndolas manualmente
+❌ El resultado: menos tiempo para el trabajo de valor
+
+Entonces decidimos construir la solución usando vibecoding.
+
+Presentamos DICTÁFONO AI 🎙 ️ 100% web sin necesidad de instalar. 
+Se puede usar desde el teléfono mediante un atajo o widget a la pantalla principal.
+
+Una aplicación que utiliza inteligencia artificial para:
+✅ Transcribir audios a texto en segundos
+✅ Eliminar automáticamente muletillas y errores gramaticales  
+✅ Estructurar el contenido en formatos profesionales (emails, actas, listas)
+✅ Todo esto: 100% GRATIS. Es un proyecto de aprendizaje al estilo de “hágalo Ud. mismo”. No busca competir con apps comerciales.
+
+🔗 Instrucciones para configuración y uso en: https://dictafono-ai-qxsnswy.gamma.site/
+
+La tecnología debería devolvernos tiempo, no quitárnoslo.
+
+🤝 Lo que buscamos es el feedback de profesionales que la usen. Nos sirve mucho conocer sus experiencias en los comentarios o por mensaje directo.
+
+#Productividad #InteligenciaArtificial #DesarrolloDeSoftware #Innovación #TechStartup #VoiceTechnology #IndieDeveloper #SaaS #Automatización #DictafonoAI
+
+¿Conocen a alguien que podría beneficiarse? Un share sería muy apreciado 🙏
+```
+
+---
+
+### **Artículo Largo (LinkedIn Articles)**
+
+**Título:** "Cómo construí una app de IA en 3 meses (y por qué la doy gratis)"
+
+**Estructura sugerida:**
+1. **El problema**: Tu experiencia personal perdiendo tiempo transcribiendo
+2. **La investigación**: Datos sobre pérdida de tiempo en tareas repetitivas
+3. **El desarrollo**: Stack tecnológico, desafíos técnicos, decisiones de diseño
+4. **La decisión de hacerla gratis**: Tu filosofía de acceso abierto
+5. **Lecciones aprendidas**: Para otros desarrolladores indie
+6. **Call to action**: Invitación a probar y dar feedback
+
+---
+
+## 🐦 **TWITTER / X**
+
+### **Tweet Individual**
+
+```
+Una app que transcribe audios con IA en segundos 🎙️
+
+→ Elimina muletillas automáticamente
+→ Estructura el texto (emails, actas, listas)
+→ 100% GRATIS
+
+Se llama DICTÁFONO AI https://dictafono-ai-qxsnswy.gamma.site/
+
+La hice porque odiaba perder horas transcribiendo manualmente
+
+
+¿Feedback? Respóndeme aquí 👇
+```
+
+---
+
+### **Hilo (Thread) - Más engagement**
+
+**Tweet 1/6:**
+```
+Perdía 10+ horas semanales transcribiendo audios.
+
+Así que construí una app de IA que lo hace por mí en segundos.
+
+Hilo sobre cómo creé DICTÁFONO AI 🧵
+```
+
+**Tweet 2/6:**
+```
+El problema:
+
+❌ Grabas reuniones, entrevistas, ideas
+❌ Las transcribes a mano (o pagas caro)
+❌ Pierdes horas valiosas
+❌ El resultado tiene muletillas y errores
+
+Esto me pasaba SEMANALMENTE.
+```
+
+**Tweet 3/6:**
+```
+La solución que construí:
+
+✅ Grabas o subes tu audio
+✅ IA transcribe + limpia automáticamente
+✅ Elimina "ehhh", "esteee", repeticiones
+✅ Estructura el texto listo para usar
+✅ Todo en 30 segundos
+
+100% GRATIS.
+```
+
+**Tweet 4/6:**
+```
+Stack técnico:
+
+→ Frontend: [Tu tecnología]
+→ Backend: [Tu tecnología]
+→ IA: [Modelo que uses]
+→ Hosting: [Tu servicio]
+
+Tiempo de desarrollo: 3 meses (trabajando solo)
+
+Desafío mayor: Entrenar la IA para español latino 🇦🇷🇲🇽🇨🇴
+```
+
+**Tweet 5/6:**
+```
+¿Por qué la hago gratis?
+
+Porque creo que las herramientas de productividad deberían ser accesibles.
+
+Además: tu feedback me ayuda a mejorarla.
+
+Si la usas y te sirve, compártela. Eso es suficiente para mí.
+```
+
+**Tweet 6/6:**
+```
+Pruébala aquí:
+https://dictafono-ai-qxsnswy.gamma.site/
+
+¿Tienes preguntas? Respóndeme este hilo y te contesto.
+
+¿Conoces a alguien que transcribe manualmente? Etiquétalo 👇
+
+RT si crees que la productividad debería ser gratis 🔄
+```
+
+---
+
+### **Tweets de Seguimiento (Para publicar después)**
+
+**Tweet tipo testimonio:**
+```
+Actualización DICTÁFONO AI:
+
+ 500+ usuarios en la primera semana
+⏱️ 2,000+ horas ahorradas en transcripciones
+🌎 Usuarios en 8 países
+
+Gracias a todos los que la están usando y dando feedback.
+
+¿Ya la probaste? https://dictafono-ai-qxsnswy.gamma.site/
+```
+
+**Tweet tipo "building in public":**
+```
+Building in public - Día 15:
+
+Hoy agregué:
+✅ Soporte para acentos regionales
+✅ Exportación a PDF
+✅ Historial de transcripciones
+
+Próximo: Integración con Google Drive
+
+¿Qué feature te gustaría ver? 👇
+
+#BuildInPublic #IndieHacker
+```
+
+---
+
+## 📝 **SUBSTACK**
+
+### **Newsletter Completa**
+
+**Título:** "Construí una app de IA para devolverte tu tiempo (y es gratis)"
+
+**Subtítulo:** "La historia detrás de DICTÁFONO AI, por qué la creé, cómo funciona y por qué no cobro por ella"
+
+---
+
+**Cuerpo del newsletter:**
+
+```
+Hola, soy [Tu Nombre].
+
+Hoy quiero contarte sobre algo en lo que trabajé los últimos meses y que lancé oficialmente esta semana.
+
+Pero antes, déjame hacerte una pregunta:
+
+**¿Cuántas horas al mes pasas transcribiendo audios?**
+
+Si tu respuesta es "demasiadas", entonces esta historia es para ti.
+
+---
+
+## El problema que nadie quería resolver
+
+Hace seis meses, me encontré en una situación ridícula:
+
+Tenía 3 horas de entrevistas grabadas para un proyecto. Material valioso. Pero sabía que me tomaría **al menos 12 horas** transcribirlas manualmente.
+
+Doce horas.
+
+Eso es:
+- Una jornada laboral y media
+- 3 episodios de tu serie favorita
+- Tiempo suficiente para aprender lo básico de un nuevo skill
+
+Y sin embargo, ahí estaba, listo a perder ese tiempo porque no había alternativa viable.
+
+Investigué:
+- Software de transcripción automática: Caro y en inglés
+- Servicios外包: $2-3 por minuto de audio
+- Hacerlo yo mismo: Gratis pero doloroso
+
+Ninguna opción me convencía.
+
+**Así que decidí construir la mía.**
+
+---
+
+## El nacimiento de DICTÁFONO AI
+
+No soy una empresa con 50 empleados. Soy una sola persona con:
+- Una laptop
+- Conocimientos de programación
+- Mucha café ☕
+- Y una idea clara: **la productividad no debería ser un lujo**
+
+Durante 3 meses trabajé en DICTÁFONO AI, una aplicación que:
+
+1. **Transcribe** tus audios usando inteligencia artificial
+2. **Limpia** el texto eliminando muletillas, repeticiones y errores
+3. **Estructura** el contenido en formatos útiles (emails, actas, listas)
+4. **Todo en segundos**, no en horas
+
+Lo mejor: **Es 100% gratuita.**
+
+---
+
+## ¿Por qué gratis?
+
+Buena pregunta.
+
+Podría:
+- Cobrar una suscripción mensual
+- Poner un límite de minutos gratis
+- Vender tus datos (nunca haría esto)
+
+Pero elegí no hacerlo por estas razones:
+
+**1. Accesibilidad**
+Creo firmemente que las herramientas que mejoran la productividad deberían estar al alcance de todos, no solo de quienes pueden pagar $20/mes.
+
+**2. Feedback > Dinero (por ahora)**
+En esta etapa, tu opinión vale más que $5. Si la usas y me dices qué mejorar, la app será mejor. Si es mejor, más gente la usará. Es un círculo virtuoso.
+
+**3. Filosofía de código abierto**
+Aunque el código no es abierto (todavía), mi mentalidad sí lo es. Construir en público, compartir aprendizajes, ayudar a otros desarrolladores.
+
+**4. Confianza**
+Si en el futuro decido agregar funciones premium (que sean realmente útiles, no artificiales), quiero que confíes en mí. Y la confianza se gana dando valor primero, sin pedir nada a cambio.
+
+---
+
+## ¿Para quién es?
+
+He identificado varios perfiles que ya están usando Dictáfono:
+
+🎓 **Estudiantes**
+- Digitalizan apuntes de clase grabados
+- Transcriben entrevistas para tesis
+- Convierten ideas en ensayos estructurados
+
+💼 **Profesionales**
+- Abogados que documentan consultas
+- Consultores que procesan reuniones
+- Periodistas que transcriben entrevistas
+
+🎨 **Creadores**
+- Podcasters que generan show notes
+- YouTubers que crean guiones
+- Escritores que capturan ideas en movimiento
+
+📱 **Emprendedores**
+- Documentan llamadas con clientes
+- Crean actas de reuniones de equipo
+- Transforman ideas en planes de acción
+
+---
+
+## Cómo funciona (técnicamente)
+
+Si te interesa el stack, aquí va:
+
+- **Frontend**: [Tu tecnología - ej: React/Next.js]
+- **Backend**: [Tu tecnología - ej: Node.js/Python]
+- **IA de transcripción**: [Modelo - ej: Whisper de OpenAI]
+- **Procesamiento de lenguaje**: [Herramienta - ej: GPT-4 para limpieza]
+- **Hosting**: [Servicio - ej: Vercel/AWS]
+- **Base de datos**: [Tecnología - ej: PostgreSQL]
+
+El desafío más grande fue entrenar/ajustar el modelo para entender:
+- Acentos latinoamericanos 🇦🇷🇲🇽🇨🇴🇨🇱
+- Jerga profesional específica
+- Contextos diferentes (reunión formal vs. idea casual)
+
+---
+
+## Lo que viene
+
+Roadmap público (porque construyo en público):
+
+**Q1 2024:**
+- ✅ Lanzamiento versión básica
+- 🔄 Integración con Google Drive
+- 🔄 Exportación a múltiples formatos (DOCX, PDF, TXT)
+
+**Q2 2024:**
+- 📅 Soporte para múltiples idiomas
+- 📅 App móvil nativa (iOS/Android)
+- 📅 Colaboración en tiempo real
+
+**Q3 2024:**
+- 📅 API para desarrolladores
+- 📅 Integraciones (Zapier, Notion, Slack)
+- 📅 Versión premium (solo si agrega valor real)
+
+---
+
+## Tu turno
+
+Si llegaste hasta acá, gracias por leer.
+
+Ahora te invito a:
+
+1. **Probar la app**: https://dictafono-ai-qxsnswy.gamma.site/
+2. **Darme feedback**: Responde este email y cuéntame qué piensas
+3. **Compartirla**: Si conoces a alguien que transcribe manualmente, pásala
+
+Cada descarga, cada comentario, cada sugerencia me ayuda a hacerla mejor.
+
+---
+
+## Última cosa
+
+Si eres desarrollador/a y estás construyendo algo, te digo esto:
+
+**No necesitas ser una empresa grande para resolver un problema real.**
+
+Necesitas:
+- Identificar un dolor genuino
+- Tener las habilidades (o aprenderlas)
+- Construir con paciencia
+- Escuchar a tus usuarios
+- Iterar constantemente
+
+Eso es todo.
+
+Nos vemos en el próximo newsletter, donde contaré sobre los primeros 100 usuarios y lo que aprendí de ellos.
+
+Hasta entonces,
+
+[Tu Nombre]
+Creador de DICTÁFONO AI
+
+P.D.: Si tienes preguntas sobre el desarrollo, el modelo de negocio (o la falta de él), o cualquier otra cosa, responde este email. Leo y contesto cada mensaje. 📬
+
+---
+
+**¿Te gustó este newsletter?**
+- Suscríbete para más historias de desarrollo indie
+- Compártelo con alguien que necesite más tiempo en su día
+- Sígueme en Twitter: @[TuUsuario]
+```
+
+---
+
+## 🎭 **REDDIT**
+
+### **Subreddits recomendados:**
+- r/Entrepreneur
+- r/SideProject
+- r/IndieHackers
+- r/Productivity
+- r/ArtificialInteligence
+- r/[TuPaís] (ej: r/argentina, r/mexico, r/Colombia)
+- r/decordemos (si es desarrollo)
+
+---
+
+### **Post Tipo "Showoff"**
+
+**Título:** "Construí una app de transcripción con IA en 3 meses (solo, gratis, open feedback)"
+
+**Cuerpo:**
+
+```
+Hola Reddit,
+
+TL;DR: Creé DICTÁFONO AI porque odiaba transcribir audios manualmente. Usa IA para transcribir, limpiar y estructurar textos. Es 100% gratis. Busco feedback honesto.
+
+---
+
+**El backstory:**
+
+Hace unos meses estaba trabajando en un proyecto que requería transcribir 3 horas de entrevistas. Sabía que me tomaría ~12 horas hacerlo manualmente.
+
+Pensé: "En 2024, ¿por qué sigo haciendo esto a mano?"
+
+Investigué opciones:
+- Otter.ai: Bueno pero caro y enfocado en inglés
+- Transcripción manual: Gratis pero pierdo mi vida
+- Servicios de outsourcing: $2-3/minuto
+
+Ninguna me convencía para uso en español.
+
+Así que decidí construirla yo mismo.
+
+---
+
+**¿Qué hace?**
+
+DICTÁFONO AI:
+1. Transcribe audios a texto (usa [modelo que uses, ej: Whisper])
+2. Limpia el texto automáticamente (elimina "ehhh", "esteee", repeticiones)
+3. Estructura el contenido (puede generar emails, actas, listas)
+4. Todo en segundos
+
+**Stack:**
+- Frontend: [Tu tech]
+- Backend: [Tu tech]
+- IA: [Modelo]
+- Hosting: [Servicio]
+
+Tiempo: 3 meses trabajando solo, nights & weekends.
+
+---
+
+**¿Por qué es gratis?**
+
+Porque:
+1. Creo que la productividad debería ser accesible
+2. Tu feedback vale más que $5 en esta etapa
+3. Estoy construyendo portfolio y aprendiendo
+4. Si en el futuro agrego features premium, quiero que confíes en mí
+
+No vendo datos. No hay letras chiquitas. Punto.
+
+---
+
+**Lo que necesito de ustedes:**
+
+Feedback HONESTO (Reddit es bueno para esto 😄):
+
+❓ ¿Funciona para tu caso de uso?
+❓ ¿Qué features faltan?
+❓ ¿La UI/UX es clara?
+❓ ¿Bug reports?
+❓ ¿Ideas de mejora?
+
+Link: https://dictafono-ai-qxsnswy.gamma.site/
+
+---
+
+**AMA:**
+
+Pregúntame lo que quieras sobre:
+- El proceso de desarrollo
+- Decisiones técnicas
+- Por qué elegí X tecnología
+- Cómo manejé [desafío específico]
+- Planes futuros
+- Cualquier otra cosa
+
+Construyo en público y aprendo de la comunidad.
+
+---
+
+**Edit 1:** [Actualizar con preguntas frecuentes que surjan]
+
+**Edit 2:** [Agregar stats si es relevante: "24 horas después: 50 usuarios, gracias Reddit!"]
+
+---
+
+Gracias por leer. Espero sus críticas constructivas (y también las destructivas, si se merecen 😅).
+```
+
+---
+
+### **Post Tipo "Discussion" (Menos promocional)**
+
+**Título:** "¿Cuánto tiempo pierden transcribiendo audios? Construí una solución y quiero opiniones"
+
+**Cuerpo:**
+
+```
+Pregunta seria: ¿Cuántas horas al mes pasan transcribiendo audios manualmente?
+
+Contexto: Soy desarrollador y trabajo con entrevistas/contenido en audio. Cada vez que grabo algo, sé que me esperan HORAS de transcripción manual.
+
+Es 2026. Debería haber una solución mejor.
+
+Las que encontré:
+- Software caro ($20-50/mes)
+- Servicios en inglés principalmente
+- Calidad mediocre en español
+
+Así que construí mi propia solución con IA. Transcribe, limpia muletillas y estructura el texto automáticamente.
+
+La hice gratis porque creo que esto debería ser accesible.
+
+**Pero antes de promoverla, quiero saber:**
+
+1. ¿Es un problema real para ustedes o solo para mí?
+2. ¿Qué features considerarían esenciales?
+3. ¿Pagarían por algo así o prefieren gratis con limitaciones?
+4. ¿Qué les frustra de las herramientas actuales?
+
+Si el problema les resuena, puedo compartir el link. Si no, al menos sé que no estoy solo en esto 😅
+
+Gracias Reddit.
+```
+
+---
+
+### **Comentarios estratégicos (Para hacer en otros posts)**
+
+Cuando veas posts sobre:
+- Productividad
+- Transcripción
+- IA
+- Desarrollo de apps
+
+Comenta algo como:
+
+```
+Interesante punto. Justo pasé por esto y construí una herramienta que [resuelve X]. 
+
+No es perfecto pero funciona bien para [caso de uso]. Si a alguien le sirve: [link]
+
+Feedback siempre bienvenido.
+```
+
+---
+
+## 📊 **RESUMEN DE ESTRATEGIA POR RED**
+
+| Red | Frecuencia | Tono | CTA Principal |
+|-----|-----------|------|---------------|
+| **Instagram** | 3-4x/semana | Visual, emotivo | Link en bio + DM |
+| **LinkedIn** | 2-3x/semana | Profesional, casos de uso | Prueba + feedback |
+| **Twitter** | 1-2 tweets/día + hilos | Directo, building in public | Prueba + RT |
+| **Substack** | 1x/semana | Narrativo largo, profundo | Suscripción + prueba |
+| **Reddit** | 1-2x/semana (sin spamear) | Auténtico, comunidad | Feedback honesto |
+
+---
+
+## 🎯 **CONSEJOS FINALES**
+
+1. **Adapta, no copies**: Cada red tiene su cultura
+2. **Sé consistente**: Mejor poco y constante que mucho y desaparecer
+3. **Responde siempre**: La interacción multiplica el alcance
+4. **Mide y ajusta**: Usa analytics para ver qué funciona
+5. **Sé tú mismo**: Tu autenticidad como creador es tu ventaja
+
+¿Necesitas que ajuste algo o cree contenido específico para alguna campaña? 🚀
+
+txt postreo tiktok
+DICTÁFONO AI
+Una app que graba y transcribe audios con IA en segundos 🎙️
+https://dictafono-ai-qxsnswy.gamma.site/
+La hice porque odiaba perder horas transcribiendo con IA
+
+→ Elimina muletillas automáticamente
+→ Estructura el texto (emails, actas, listas)
+→ 100% GRATIS
+Solo te pido tu Feedback
+Respóndeme en los comentarios o por mensaje
+
+

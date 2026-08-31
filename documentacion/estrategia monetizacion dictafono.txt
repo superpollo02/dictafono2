@@ -1,0 +1,81 @@
+
+Pestaña 1
+Quiero que me ayudes a pensar la estrategia de monetización de la aplicación Dictáfono. Dictáfono es un proyecto que transcribe audios, graba audio y lo transcribe en una versión literal y una versión mediada resumida, eliminando las vueltas del lenguaje verbal. También permite subir un audio y transcribirlo, ofreciendo la opción de transcripción literal y limpia.
+
+
+quiero que me ayudes a pensar cómo puedo plantear una estrategia para hacer conocer está app que he creado como proyecto de aprendizaje al estilo de “hágalo ud mismo” con vibecoding.
+No la planteo como proyecto comercial sino para que quienes la usen me envien feedback para así mejorarla, ponerle otras funciones, hacerla una app de android, etc, luego en una version más definitiva y comercial. 
+No la presento yo en primera persona sino mi “company of one”, -Educ. AI- Mi emprendimiento para que tenga una identidad de marca que no esté asociada a mi persona sino sea más institucional. 
+Si me aconsejas postear en tal o cual red, de qué manera, qué mensaje debo
+
+
+
+está es la descripción de la app donde podrás encontrar más contexto: 
+
+“Desde EDUC.AI  hemos desarrollado esta herramienta con una misión clara:
+✨ Devolverte horas de tu vida para que las uses en lo que realmente importa.
+🎙️ DICTÁFONO AI hace esto por vos:
+→ Convierte voz en texto profesional con IA
+→ Elimina automáticamente "ehhh", "esteee", repeticiones
+→ Organiza el resultado: emails, listas, actas listas para usar
+→ Todo en segundos, no en horas
+
+Dictáfono es una herramienta avanzada de productividad diseñada para transformar tus pensamientos hablados en documentos profesionales listos para compartir. Utiliza inteligencia artificial de vanguardia para transcribir, limpiar y estructurar tus audios de manera automática.
+Ideal para profesionales, estudiantes y creadores que necesitan capturar ideas, reuniones, entrevistas o clases sin perder tiempo en transcripciones manuales.
+Elimina muletillas: borra automáticamente los "eh...", "este...", repeticiones y errores gramaticales.
+Ahorra tiempo: evita horas de escritura manual transcribiendo audios en segundos.
+Organización: transforma notas de voz desordenadas en textos estructurados (emails, listas, actas).
+ 
+¿Por qué DICTÁFONO AI?
+Porque creemos que tu tiempo vale más que transcribir audios.
+🎁 Es GRATIS porque quiero que llegue a quien lo necesite.
+      Es 100% basada en la Web. No hay que instalar nada
+👉 Link de acceso y configuracion en https://dictafono-ai-qxsnswy.gamma.site/
+🤝 Si te sirve, ayúdame a compartirla con más personas.
+Cada descarga nos sirve para seguir mejorándola.
+conocenos en https://www.linkedin.com/in/educaailatam/
+
+
+
+ 
+txt para viralizar
+Desde EDUC.AI  hemos desarrollado esta herramienta con una misión clara:
+✨ Devolverte horas de tu vida para que las uses en lo que realmente importa.
+🎙️ DICTÁFONO AI hace esto por vos:
+→ Convierte voz en texto profesional con IA
+→ Elimina automáticamente "ehhh", "esteee", repeticiones
+→ Organiza el resultado: emails, listas, actas listas para usar
+→ Todo en segundos, no en horas
+
+Dictáfono es una herramienta avanzada de productividad diseñada para transformar tus pensamientos hablados en documentos profesionales listos para compartir. Utiliza inteligencia artificial de vanguardia para transcribir, limpiar y estructurar tus audios de manera automática.
+Ideal para profesionales, estudiantes y creadores que necesitan capturar ideas, reuniones, entrevistas o clases sin perder tiempo en transcripciones manuales.
+Elimina muletillas: borra automáticamente los "eh...", "este...", repeticiones y errores gramaticales.
+Ahorra tiempo: evita horas de escritura manual transcribiendo audios en segundos.
+Organización: transforma notas de voz desordenadas en textos estructurados (emails, listas, actas).
+ 
+¿Por qué DICTÁFONO AI?
+Porque creemos que tu tiempo vale más que transcribir audios.
+🎁 Es GRATIS porque quiero que llegue a quien lo necesite.
+      Es 100% basada en la Web. No hay que instalar nada
+👉 Link de acceso y configuracion en https://dictafono-ai-qxsnswy.gamma.site/
+🤝 Si te sirve, ayúdame a compartirla con más personas.
+Cada descarga nos sirve para seguir mejorándola.
+conocenos en https://www.linkedin.com/in/educaailatam/
+
+ok
+Hola.                                 como estas
+
+
+Te mando esto porque creo que te puede servir — y porque necesito que lo prueben antes de lanzarlo más amplio. 
+Sabés ese momento en que grabás una idea en el celu mientras caminás o manejás, y después queda ahí guardada para siempre? El flujo habitual para pasarla a texto es un embole: subís el audio a google drive, lo abrís con Gemini o ChatGPT para que lo transcriba, copiás, pegás en otro lado, y encima le tenes que indicar que elimine los "ehhh" y las redundancias del lenguaje verbal. Varios pasos, varios minutos, varias chances de que uno se canse y lo abandon.
+
+Como experiencia de aprendizaje hice una herramienta web que hace todo eso en uno solo: grabás, elegís cómo querés el resultado (texto limpio, email listo para mandar, lista de puntos, acta formal), apretás el botón, y lo tenés. Hasta 15 minutos de grabación. Gratis, sin instalar nada. Es un montón.
+
+Tiene un único paso de configuración la primera vez — obtener una clave gratuita de Groq, que es el motor de IA que usa. Son nomas de 3 minutos. En el video que adjunto lo muestro, y si va rápido, acá está el paso a paso con capturas:
+👉 https://dictafono-ai-qxsnswy.gamma.site/
+
+Es un proyecto de aprendizaje, al estilo de “hagalo Ud mismo”, no es algo comercial. Lo comparto sin costo ni registro. Lo que pido a cambio es feedback real: qué funcionó, qué no, qué le falta. Cada comentario me sirve para mejorarlo.
+
+¿Lo probás y me contás qué pasó? Podés responderme acá o escribirme a educaailatam@gmail.com, el email del emprendimiento.
+gracias!!
+

@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Dictáfono AI",
+  "description": "Transcribe and clean your voice recordings using Groq Whisper and LLM.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
