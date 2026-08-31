@@ -283,10 +283,6 @@ function createWindow() {
     },
   });
 
-  if (process.env.NODE_ENV === 'development') {
-    mainWindow.webContents.openDevTools();
-  }
-
   mainWindow.loadURL('http://127.0.0.1:3000');
 
   mainWindow.on('closed', function () {
